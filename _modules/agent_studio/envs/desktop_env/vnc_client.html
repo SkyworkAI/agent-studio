@@ -1,0 +1,1296 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agent_studio.envs.desktop_env.vnc_client &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/agent_studio/envs/desktop_env/vnc_client';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../autoapi/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/envs/desktop_env/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for agent_studio.envs.desktop_env.vnc_client</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">asyncio</span> <span class="kn">import</span> <span class="n">StreamReader</span><span class="p">,</span> <span class="n">StreamWriter</span><span class="p">,</span> <span class="n">open_connection</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">urandom</span>
+<span class="kn">from</span> <span class="nn">struct</span> <span class="kn">import</span> <span class="n">unpack</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span> <span class="nn">zlib</span> <span class="kn">import</span> <span class="n">decompressobj</span>
+
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">mss</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">cryptography.hazmat.primitives.asymmetric</span> <span class="kn">import</span> <span class="n">padding</span><span class="p">,</span> <span class="n">rsa</span>
+<span class="kn">from</span> <span class="nn">cryptography.hazmat.primitives.ciphers</span> <span class="kn">import</span> <span class="n">Cipher</span><span class="p">,</span> <span class="n">algorithms</span><span class="p">,</span> <span class="n">modes</span>
+<span class="kn">from</span> <span class="nn">cryptography.hazmat.primitives.serialization</span> <span class="kn">import</span> <span class="n">load_der_public_key</span>
+<span class="kn">from</span> <span class="nn">PyQt6.QtCore</span> <span class="kn">import</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PyQt6.QtGui</span> <span class="kn">import</span> <span class="n">QColor</span><span class="p">,</span> <span class="n">QCursor</span><span class="p">,</span> <span class="n">QFont</span><span class="p">,</span> <span class="n">QPainter</span><span class="p">,</span> <span class="n">QPen</span><span class="p">,</span> <span class="n">QPixmap</span>
+<span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QLabel</span>
+
+<div class="viewcode-block" id="logger"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.logger">[docs]</a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></div>
+
+<span class="c1"># Common screen aspect ratios</span>
+<div class="viewcode-block" id="screen_ratios"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.screen_ratios">[docs]</a><span class="n">screen_ratios</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="n">Fraction</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">Fraction</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="n">Fraction</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+    <span class="n">Fraction</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+    <span class="n">Fraction</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">27</span><span class="p">),</span>
+<span class="p">}</span></div>
+
+<span class="c1"># Colour channel orders</span>
+<div class="viewcode-block" id="video_modes"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.video_modes">[docs]</a><span class="n">video_modes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x20\x18\x00\x01\x00\xff\x00\xff\x00\xff\x10\x08\x00</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;bgra&quot;</span><span class="p">,</span>
+    <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x20\x18\x00\x01\x00\xff\x00\xff\x00\xff\x00\x08\x10</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;rgba&quot;</span><span class="p">,</span>
+    <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x20\x18\x01\x01\x00\xff\x00\xff\x00\xff\x10\x08\x00</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;argb&quot;</span><span class="p">,</span>
+    <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x20\x18\x01\x01\x00\xff\x00\xff\x00\xff\x00\x08\x10</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;abgr&quot;</span><span class="p">,</span>
+<span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="read_int"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.read_int">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads, unpacks, and returns an integer of *length* bytes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">length</span><span class="p">),</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="read_text"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.read_text">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">read_text</span><span class="p">(</span><span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span><span class="p">,</span> <span class="n">encoding</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads, unpacks, and returns length-prefixed text.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">length</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="skip_to_eof"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.skip_to_eof">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">skip_to_eof</span><span class="p">(</span><span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span><span class="p">):</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;[asyncvnc] skip to eof&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="pack_ard"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.pack_ard">[docs]</a><span class="k">def</span> <span class="nf">pack_ard</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">64</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">+=</span> <span class="n">urandom</span><span class="p">(</span><span class="mi">64</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:</span><span class="mi">64</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<span class="nd">@dataclass</span>
+<div class="viewcode-block" id="Position"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Position">[docs]</a><span class="k">class</span> <span class="nc">Position</span><span class="p">:</span>
+<div class="viewcode-block" id="Position.width"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Position.width">[docs]</a>    <span class="n">width</span><span class="p">:</span> <span class="nb">int</span></div>
+<div class="viewcode-block" id="Position.height"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Position.height">[docs]</a>    <span class="n">height</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Position(</span><span class="si">{}</span><span class="s2">,</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">)</span></div>
+
+
+<span class="nd">@dataclass</span>
+<div class="viewcode-block" id="Clipboard"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Clipboard">[docs]</a><span class="k">class</span> <span class="nc">Clipboard</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Shared clipboard.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Clipboard.writer"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Clipboard.writer">[docs]</a>    <span class="n">writer</span><span class="p">:</span> <span class="n">StreamWriter</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+    <span class="c1">#: The clipboard text.</span>
+<div class="viewcode-block" id="Clipboard.text"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Clipboard.text">[docs]</a>    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Clipboard.write"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Clipboard.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sends clipboard text to the server.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[asyncvnc] send clipboard text: &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;latin-1&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x06\x00</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">data</span><span class="p">)</span></div></div>
+
+
+<span class="nd">@dataclass</span>
+<div class="viewcode-block" id="Screen"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen">[docs]</a><span class="k">class</span> <span class="nc">Screen</span><span class="p">:</span>
+<div class="viewcode-block" id="Screen.x"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen.x">[docs]</a>    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="c1">#: Vertical position in pixels.</span>
+<div class="viewcode-block" id="Screen.y"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen.y">[docs]</a>    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="c1">#: Width in pixels.</span>
+<div class="viewcode-block" id="Screen.width"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen.width">[docs]</a>    <span class="n">width</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="c1">#: Height in pixels.</span>
+<div class="viewcode-block" id="Screen.height"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen.height">[docs]</a>    <span class="n">height</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="Screen.slices"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen.slices">[docs]</a>    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">slice</span><span class="p">,</span> <span class="nb">slice</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Object that can be used to crop the video buffer to this screen.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">slice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">),</span> <span class="nb">slice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="Screen.score"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Screen.score">[docs]</a>    <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A measure of our confidence that this represents a real screen. For screens with standard aspect ratios, this  # noqa: E501</span>
+<span class="sd">        is proportional to its pixel area. For non-standard aspect ratios, the score is further multiplied by the ratio  # noqa: E501</span>
+<span class="sd">        or its reciprocal, whichever is smaller.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+        <span class="n">ratios</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">Fraction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">)</span><span class="o">.</span><span class="n">limit_denominator</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+            <span class="n">Fraction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span><span class="o">.</span><span class="n">limit_denominator</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ratios</span> <span class="o">&amp;</span> <span class="n">screen_ratios</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">*=</span> <span class="nb">min</span><span class="p">(</span><span class="n">ratios</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span>
+        <span class="k">return</span> <span class="n">value</span></div></div>
+
+
+<span class="nd">@dataclass</span>
+<div class="viewcode-block" id="Video"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video">[docs]</a><span class="k">class</span> <span class="nc">Video</span><span class="p">:</span>
+<div class="viewcode-block" id="Video.reader"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.reader">[docs]</a>    <span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+<div class="viewcode-block" id="Video.writer"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.writer">[docs]</a>    <span class="n">writer</span><span class="p">:</span> <span class="n">StreamWriter</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+<div class="viewcode-block" id="Video.decompress"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.decompress">[docs]</a>    <span class="n">decompress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">bytes</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+    <span class="c1">#: Desktop name.</span>
+<div class="viewcode-block" id="Video.name"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.name">[docs]</a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span></div>
+
+    <span class="c1">#: Width in pixels.</span>
+<div class="viewcode-block" id="Video.width"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.width">[docs]</a>    <span class="n">width</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="c1">#: Height in pixels.</span>
+<div class="viewcode-block" id="Video.height"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.height">[docs]</a>    <span class="n">height</span><span class="p">:</span> <span class="nb">int</span></div>
+
+    <span class="c1">#: Colour channel order.</span>
+<div class="viewcode-block" id="Video.mode"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.mode">[docs]</a>    <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span></div>
+
+    <span class="c1">#: 3D numpy array of colour data.</span>
+<div class="viewcode-block" id="Video.data"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.data">[docs]</a>    <span class="n">data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+    <span class="c1"># bytes per pixel</span>
+<div class="viewcode-block" id="Video.bypp"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.bypp">[docs]</a>    <span class="n">bypp</span> <span class="o">=</span> <span class="mi">4</span></div>
+
+    <span class="n">_switch_to_rre</span> <span class="o">=</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="Video.now_encoding"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.now_encoding">[docs]</a>    <span class="n">now_encoding</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Video.create"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.create">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span><span class="p">,</span> <span class="n">writer</span><span class="p">:</span> <span class="n">StreamWriter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Video&quot;</span><span class="p">:</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x01</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">mode_data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">13</span><span class="p">))</span>
+        <span class="n">mode_data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&amp;=</span> <span class="mi">1</span>  <span class="c1"># set big endian flag to 0 or 1</span>
+        <span class="n">mode_data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&amp;=</span> <span class="mi">1</span>  <span class="c1"># set true colour flag to 0 or 1</span>
+        <span class="n">mode</span> <span class="o">=</span> <span class="n">video_modes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">mode_data</span><span class="p">))</span>
+        <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># padding</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_text</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;rgba&quot;</span>
+            <span class="c1"># https://github.com/TurboVNC/tightvnc/blob/main/vnc_winsrc/rfb/rfbproto.h#L406</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x00\x20\x18\x00\x01\x00\xff</span><span class="s2">&quot;</span>
+                <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\xff\x00\xff\x00\x08\x10\x00\x00\x00</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">compress_code</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x05</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># Hextile</span>
+            <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x06</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># ZLib</span>
+            <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x00</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># raw</span>
+        <span class="p">]</span>
+        <span class="n">compress_code_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">compress_code</span><span class="p">)</span>
+        <span class="n">compress_code_num_bytes</span> <span class="o">=</span> <span class="n">compress_code_num</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
+        <span class="n">compress_code_send_message</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x02\x00</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">compress_code_num_bytes</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">compress_code</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">compress_code_send_message</span><span class="p">)</span>
+
+        <span class="n">decompress</span> <span class="o">=</span> <span class="n">decompressobj</span><span class="p">()</span><span class="o">.</span><span class="n">decompress</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">writer</span><span class="p">,</span> <span class="n">decompress</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Video.refresh"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.refresh">[docs]</a>    <span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">width</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">height</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sends a video buffer update request to the server.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">incremental</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+        <span class="k">if</span> <span class="n">height</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+            <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x03</span><span class="s2">&quot;</span>
+            <span class="o">+</span> <span class="n">incremental</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">y</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">width</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">height</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_handle_rre_sub_rectangles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">topx</span><span class="p">,</span> <span class="n">topy</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        # RRE Sub Rectangles</span>
+<span class="sd">        :param block:</span>
+<span class="sd">        :param topx:</span>
+<span class="sd">        :param topy:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+        <span class="n">sz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bypp</span> <span class="o">+</span> <span class="mi">8</span>
+        <span class="nb">format</span> <span class="o">=</span> <span class="s2">&quot;!</span><span class="si">%d</span><span class="s2">sHHHH&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">bypp</span>
+        <span class="k">while</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">block</span><span class="p">[</span><span class="n">pos</span> <span class="p">:</span> <span class="n">pos</span> <span class="o">+</span> <span class="n">sz</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span>
+                <span class="n">topy</span> <span class="o">+</span> <span class="n">y</span> <span class="p">:</span> <span class="n">topy</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="p">,</span> <span class="n">topx</span> <span class="o">+</span> <span class="n">x</span> <span class="p">:</span> <span class="n">topx</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span>
+            <span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="n">pos</span> <span class="o">+=</span> <span class="n">sz</span>
+
+    <span class="k">def</span> <span class="nf">_handle_decode_hextile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">bg</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">tx</span><span class="p">,</span> <span class="n">ty</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        # Hextile Decoding</span>
+<span class="sd">        :param block:</span>
+<span class="sd">        :param bg:</span>
+<span class="sd">        :param color:</span>
+<span class="sd">        :param x:</span>
+<span class="sd">        :param y:</span>
+<span class="sd">        :param width:</span>
+<span class="sd">        :param height:</span>
+<span class="sd">        :param tx:</span>
+<span class="sd">        :param ty:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="p">(</span><span class="n">sub_encoding</span><span class="p">,)</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;!B&quot;</span><span class="p">,</span> <span class="n">block</span><span class="p">)</span>
+        <span class="c1"># calc tile size</span>
+        <span class="n">tw</span> <span class="o">=</span> <span class="n">th</span> <span class="o">=</span> <span class="mi">16</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span> <span class="o">-</span> <span class="n">tx</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="n">tw</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span> <span class="o">-</span> <span class="n">tx</span>
+
+        <span class="k">if</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span> <span class="o">-</span> <span class="n">ty</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="n">th</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span> <span class="o">-</span> <span class="n">ty</span>
+
+        <span class="c1"># decode tile</span>
+        <span class="k">if</span> <span class="n">sub_encoding</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># RAW</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_handle_decode_hextile_raw</span><span class="p">,</span>
+                <span class="n">tw</span> <span class="o">*</span> <span class="n">th</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">bypp</span><span class="p">,</span>
+                <span class="n">bg</span><span class="p">,</span>
+                <span class="n">color</span><span class="p">,</span>
+                <span class="n">x</span><span class="p">,</span>
+                <span class="n">y</span><span class="p">,</span>
+                <span class="n">width</span><span class="p">,</span>
+                <span class="n">height</span><span class="p">,</span>
+                <span class="n">tx</span><span class="p">,</span>
+                <span class="n">ty</span><span class="p">,</span>
+                <span class="n">tw</span><span class="p">,</span>
+                <span class="n">th</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num_bytes</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">sub_encoding</span> <span class="o">&amp;</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># BackgroundSpecified</span>
+                <span class="n">num_bytes</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bypp</span>
+            <span class="k">if</span> <span class="n">sub_encoding</span> <span class="o">&amp;</span> <span class="mi">4</span><span class="p">:</span>  <span class="c1"># ForegroundSpecified</span>
+                <span class="n">num_bytes</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bypp</span>
+            <span class="k">if</span> <span class="n">sub_encoding</span> <span class="o">&amp;</span> <span class="mi">8</span><span class="p">:</span>  <span class="c1"># AnySubrects</span>
+                <span class="n">num_bytes</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">num_bytes</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_handle_decode_hextile_subrect</span><span class="p">,</span>
+                    <span class="n">num_bytes</span><span class="p">,</span>
+                    <span class="n">sub_encoding</span><span class="p">,</span>
+                    <span class="n">bg</span><span class="p">,</span>
+                    <span class="n">color</span><span class="p">,</span>
+                    <span class="n">x</span><span class="p">,</span>
+                    <span class="n">y</span><span class="p">,</span>
+                    <span class="n">width</span><span class="p">,</span>
+                    <span class="n">height</span><span class="p">,</span>
+                    <span class="n">tx</span><span class="p">,</span>
+                    <span class="n">ty</span><span class="p">,</span>
+                    <span class="n">tw</span><span class="p">,</span>
+                    <span class="n">th</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fill_rectangle</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">ty</span><span class="p">,</span> <span class="n">tw</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">bg</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_do_next_hextile_subrect</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">tx</span><span class="p">,</span> <span class="n">ty</span><span class="p">)</span>
+
+    <span class="c1"># @profile</span>
+<div class="viewcode-block" id="Video.read"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.read">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span>
+
+        <span class="n">info</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;!HHHHI&quot;</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+        <span class="c1"># print(f&quot;x: {x}, y: {y}, width: {width}, height: {height}&quot;)</span>
+        <span class="c1"># print(&quot;encoding: &quot;, encoding)</span>
+
+        <span class="k">if</span> <span class="n">encoding</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Raw</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">now_encoding</span> <span class="o">=</span> <span class="s2">&quot;Raw&quot;</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="n">width</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">y</span> <span class="p">:</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span>
+                <span class="n">y</span> <span class="p">:</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+            <span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>  <span class="c1"># alpha channel</span>
+
+        <span class="k">elif</span> <span class="n">encoding</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># Hextile</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">now_encoding</span> <span class="o">=</span> <span class="s2">&quot;Hextile&quot;</span>
+            <span class="n">raw</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">backgroundSpecified</span> <span class="o">=</span> <span class="mi">2</span>
+            <span class="n">foregroundSpecified</span> <span class="o">=</span> <span class="mi">4</span>
+            <span class="n">anySubrects</span> <span class="o">=</span> <span class="mi">8</span>
+            <span class="n">subrectsColoured</span> <span class="o">=</span> <span class="mi">16</span>
+            <span class="n">background</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="k">for</span> <span class="n">ty</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">tx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
+                    <span class="n">tw</span> <span class="o">=</span> <span class="n">th</span> <span class="o">=</span> <span class="mi">16</span>
+                    <span class="k">if</span> <span class="n">tw</span> <span class="o">+</span> <span class="n">tx</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">:</span>
+                        <span class="n">tw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">tx</span>
+                    <span class="k">if</span> <span class="n">th</span> <span class="o">+</span> <span class="n">ty</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
+                        <span class="n">th</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">ty</span>
+
+                    <span class="n">subencoding</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">subencoding</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;!B&quot;</span><span class="p">,</span> <span class="n">subencoding</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+                    <span class="k">if</span> <span class="n">subencoding</span> <span class="o">&amp;</span> <span class="n">raw</span><span class="p">:</span>
+                        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">th</span> <span class="o">*</span> <span class="n">tw</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ty</span> <span class="p">:</span> <span class="n">ty</span> <span class="o">+</span> <span class="n">th</span><span class="p">,</span> <span class="n">tx</span> <span class="p">:</span> <span class="n">tx</span> <span class="o">+</span> <span class="n">tw</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span>
+                            <span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span>
+                        <span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">th</span><span class="p">,</span> <span class="n">tw</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">subencoding</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ty</span> <span class="p">:</span> <span class="n">ty</span> <span class="o">+</span> <span class="n">th</span><span class="p">,</span> <span class="n">tx</span> <span class="p">:</span> <span class="n">tx</span> <span class="o">+</span> <span class="n">tw</span><span class="p">]</span> <span class="o">=</span> <span class="n">background</span>
+                            <span class="k">continue</span>
+
+                        <span class="k">if</span> <span class="n">subencoding</span> <span class="o">&amp;</span> <span class="n">backgroundSpecified</span><span class="p">:</span>
+                            <span class="n">background</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+                            <span class="n">background</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                                <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span>
+                            <span class="p">)</span>
+
+                        <span class="k">if</span> <span class="n">subencoding</span> <span class="o">&amp;</span> <span class="n">foregroundSpecified</span><span class="p">:</span>
+                            <span class="n">foreground</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+                            <span class="n">foreground</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">foreground</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                                <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span>
+                            <span class="p">)</span>
+
+                        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ty</span> <span class="p">:</span> <span class="n">ty</span> <span class="o">+</span> <span class="n">th</span><span class="p">,</span> <span class="n">tx</span> <span class="p">:</span> <span class="n">tx</span> <span class="o">+</span> <span class="n">tw</span><span class="p">]</span> <span class="o">=</span> <span class="n">background</span>
+
+                        <span class="k">if</span> <span class="n">subencoding</span> <span class="o">&amp;</span> <span class="n">anySubrects</span><span class="p">:</span>
+                            <span class="n">num_subrects</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                            <span class="n">num_subrects</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;!B&quot;</span><span class="p">,</span> <span class="n">num_subrects</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                            <span class="c1"># Define the size of each subrect, colored subrects have additional 4 bytes for the color  # noqa: E501</span>
+                            <span class="n">subrect_size</span> <span class="o">=</span> <span class="p">(</span>
+                                <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">subencoding</span> <span class="o">&amp;</span> <span class="n">subrectsColoured</span> <span class="k">else</span> <span class="mi">2</span>
+                            <span class="p">)</span>
+                            <span class="n">subrects_data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span>
+                                <span class="n">num_subrects</span> <span class="o">*</span> <span class="n">subrect_size</span>
+                            <span class="p">)</span>
+                            <span class="n">subrects_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">subrects_data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+
+                            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_subrects</span><span class="p">):</span>
+                                <span class="n">xywh_offset</span> <span class="o">=</span> <span class="mi">0</span>
+                                <span class="k">if</span> <span class="n">subencoding</span> <span class="o">&amp;</span> <span class="n">subrectsColoured</span><span class="p">:</span>
+                                    <span class="n">foreground</span> <span class="o">=</span> <span class="n">subrects_data</span><span class="p">[</span>
+                                        <span class="n">i</span> <span class="o">*</span> <span class="n">subrect_size</span> <span class="p">:</span> <span class="n">i</span> <span class="o">*</span> <span class="n">subrect_size</span> <span class="o">+</span> <span class="mi">4</span>
+                                    <span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+                                    <span class="n">xywh_offset</span> <span class="o">=</span> <span class="mi">4</span>
+
+                                <span class="n">xywh</span> <span class="o">=</span> <span class="n">subrects_data</span><span class="p">[</span>
+                                    <span class="n">i</span> <span class="o">*</span> <span class="n">subrect_size</span>
+                                    <span class="o">+</span> <span class="n">xywh_offset</span> <span class="p">:</span> <span class="n">i</span> <span class="o">*</span> <span class="n">subrect_size</span>
+                                    <span class="o">+</span> <span class="n">xywh_offset</span>
+                                    <span class="o">+</span> <span class="mi">2</span>
+                                <span class="p">]</span>
+                                <span class="n">xywh</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;!H&quot;</span><span class="p">,</span> <span class="n">xywh</span><span class="o">.</span><span class="n">tobytes</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+                                <span class="n">sx</span> <span class="o">=</span> <span class="n">xywh</span> <span class="o">&gt;&gt;</span> <span class="mi">12</span>
+                                <span class="n">sy</span> <span class="o">=</span> <span class="p">(</span><span class="n">xywh</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x0F</span>
+                                <span class="n">sw</span> <span class="o">=</span> <span class="p">(</span><span class="n">xywh</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x0F</span>
+                                <span class="n">sh</span> <span class="o">=</span> <span class="n">xywh</span> <span class="o">&amp;</span> <span class="mh">0x0F</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span>
+                                    <span class="n">ty</span> <span class="o">+</span> <span class="n">sy</span> <span class="p">:</span> <span class="n">ty</span> <span class="o">+</span> <span class="n">sy</span> <span class="o">+</span> <span class="n">sh</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                                    <span class="n">tx</span> <span class="o">+</span> <span class="n">sx</span> <span class="p">:</span> <span class="n">tx</span> <span class="o">+</span> <span class="n">sx</span> <span class="o">+</span> <span class="n">sw</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="p">]</span> <span class="o">=</span> <span class="n">foreground</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">255</span>
+
+        <span class="k">elif</span> <span class="n">encoding</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>  <span class="c1"># ZLib</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">now_encoding</span> <span class="o">=</span> <span class="s2">&quot;ZLib&quot;</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">y</span> <span class="p">:</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">y</span> <span class="p">:</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">255</span></div>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_read_set_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="c1"># Calculate the length of data and mask</span>
+        <span class="n">data_len</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span> <span class="o">*</span> <span class="mi">4</span>  <span class="c1"># assuming bpp/8 = 4</span>
+        <span class="n">mask_len</span> <span class="o">=</span> <span class="p">((</span><span class="n">width</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="n">height</span>
+
+        <span class="c1"># Read data and mask from the reader</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">data_len</span><span class="p">)</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">mask_len</span><span class="p">)</span>
+
+        <span class="c1"># Convert data and mask to numpy arrays</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">))</span>
+
+        <span class="c1"># Prepare the output buffer</span>
+        <span class="n">buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+
+        <span class="c1"># Process the data and mask</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+                <span class="n">byte_</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="p">((</span><span class="n">width</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">8</span>
+                <span class="n">bit</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">-</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">8</span>
+
+                <span class="c1"># Set alpha channel</span>
+                <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">byte_</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bit</span><span class="p">):</span>
+                    <span class="n">buf</span><span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">buf</span><span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+                <span class="c1"># Set color channels</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Video.as_rgba"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.as_rgba">[docs]</a>    <span class="k">def</span> <span class="nf">as_rgba</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the video buffer as a 3D RGBA array.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;rgba&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;abgr&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">)],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)],</span>
+            <span class="p">)</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Video.is_complete"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.Video.is_complete">[docs]</a>    <span class="k">def</span> <span class="nf">is_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns true if the video buffer is entirely opaque.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="UpdateType"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.UpdateType">[docs]</a><span class="k">class</span> <span class="nc">UpdateType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Update from server to client.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1">#: Video update.</span>
+<div class="viewcode-block" id="UpdateType.VIDEO"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.UpdateType.VIDEO">[docs]</a>    <span class="n">VIDEO</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+    <span class="c1">#: Clipboard update.</span>
+<div class="viewcode-block" id="UpdateType.CLIPBOARD"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.UpdateType.CLIPBOARD">[docs]</a>    <span class="n">CLIPBOARD</span> <span class="o">=</span> <span class="mi">2</span></div></div>
+
+
+<span class="nd">@dataclass</span>
+<div class="viewcode-block" id="VNCClient"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient">[docs]</a><span class="k">class</span> <span class="nc">VNCClient</span><span class="p">:</span>
+<div class="viewcode-block" id="VNCClient.reader"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.reader">[docs]</a>    <span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+<div class="viewcode-block" id="VNCClient.writer"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.writer">[docs]</a>    <span class="n">writer</span><span class="p">:</span> <span class="n">StreamWriter</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+    <span class="c1">#: The shared clipboard.</span>
+<div class="viewcode-block" id="VNCClient.clipboard"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.clipboard">[docs]</a>    <span class="n">clipboard</span><span class="p">:</span> <span class="n">Clipboard</span></div>
+
+    <span class="c1">#: The video buffer.</span>
+<div class="viewcode-block" id="VNCClient.video"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.video">[docs]</a>    <span class="n">video</span><span class="p">:</span> <span class="n">Video</span></div>
+
+    <span class="c1">#: The server&#39;s public key (Mac only)</span>
+<div class="viewcode-block" id="VNCClient.host_key"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.host_key">[docs]</a>    <span class="n">host_key</span><span class="p">:</span> <span class="n">rsa</span><span class="o">.</span><span class="n">RSAPublicKey</span> <span class="o">|</span> <span class="kc">None</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="VNCClient.create"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.create">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">reader</span><span class="p">:</span> <span class="n">StreamReader</span><span class="p">,</span>
+        <span class="n">writer</span><span class="p">:</span> <span class="n">StreamWriter</span><span class="p">,</span>
+        <span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">host_key</span><span class="p">:</span> <span class="n">rsa</span><span class="o">.</span><span class="n">RSAPublicKey</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;VNCClient&quot;</span><span class="p">:</span>
+        <span class="n">intro</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">intro</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">!=</span> <span class="sa">b</span><span class="s2">&quot;RFB &quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;not a VNC server&quot;</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;RFB 003.008</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">auth_types</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">auth_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="k">await</span> <span class="n">read_text</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">auth_type</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">auth_type</span> <span class="ow">in</span> <span class="n">auth_types</span><span class="p">:</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">auth_type</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">))</span>
+                <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unsupported auth types: </span><span class="si">{</span><span class="n">auth_types</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Apple authentication</span>
+        <span class="k">if</span> <span class="n">auth_type</span> <span class="o">==</span> <span class="mi">33</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">username</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;server requires username and password&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">host_key</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x0a\x01\x00</span><span class="s2">RSA1</span><span class="se">\x00\x00\x00\x00</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># packet length</span>
+                <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># packet version</span>
+                <span class="n">host_key_length</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+                <span class="n">host_key</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">host_key_length</span><span class="p">)</span>
+                <span class="n">host_key</span> <span class="o">=</span> <span class="n">load_der_public_key</span><span class="p">(</span><span class="n">host_key</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># unknown</span>
+            <span class="n">aes_key</span> <span class="o">=</span> <span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+            <span class="n">cipher</span> <span class="o">=</span> <span class="n">Cipher</span><span class="p">(</span><span class="n">algorithms</span><span class="o">.</span><span class="n">AES</span><span class="p">(</span><span class="n">aes_key</span><span class="p">),</span> <span class="n">modes</span><span class="o">.</span><span class="n">ECB</span><span class="p">())</span>
+            <span class="n">encryptor</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encryptor</span><span class="p">()</span>
+            <span class="n">credentials</span> <span class="o">=</span> <span class="n">pack_ard</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="o">+</span> <span class="n">pack_ard</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x01\x8a\x01\x00</span><span class="s2">RSA1&quot;</span>
+                <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x01</span><span class="s2">&quot;</span>
+                <span class="o">+</span> <span class="n">encryptor</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
+                <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x01</span><span class="s2">&quot;</span>
+                <span class="o">+</span> <span class="n">host_key</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">aes_key</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="o">.</span><span class="n">PKCS1v15</span><span class="p">())</span>
+            <span class="p">)</span>
+            <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># unknown</span>
+
+        <span class="c1"># VNC authentication</span>
+        <span class="k">if</span> <span class="n">auth_type</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;server requires password&quot;</span><span class="p">)</span>
+            <span class="n">des_key</span> <span class="o">=</span> <span class="n">password</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)[:</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">des_key</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">n</span><span class="p">)[:</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">des_key</span><span class="p">)</span>
+            <span class="n">encryptor</span> <span class="o">=</span> <span class="n">Cipher</span><span class="p">(</span><span class="n">algorithms</span><span class="o">.</span><span class="n">TripleDES</span><span class="p">(</span><span class="n">des_key</span><span class="p">),</span> <span class="n">modes</span><span class="o">.</span><span class="n">ECB</span><span class="p">())</span><span class="o">.</span><span class="n">encryptor</span><span class="p">()</span>
+            <span class="n">challenge</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">encryptor</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">challenge</span><span class="p">)</span> <span class="o">+</span> <span class="n">encryptor</span><span class="o">.</span><span class="n">finalize</span><span class="p">())</span>
+
+        <span class="n">auth_result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">auth_result</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+                <span class="n">reader</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span>
+                <span class="n">writer</span><span class="o">=</span><span class="n">writer</span><span class="p">,</span>
+                <span class="n">host_key</span><span class="o">=</span><span class="n">host_key</span><span class="p">,</span>
+                <span class="n">clipboard</span><span class="o">=</span><span class="n">Clipboard</span><span class="p">(</span><span class="n">writer</span><span class="p">),</span>
+                <span class="n">video</span><span class="o">=</span><span class="k">await</span> <span class="n">Video</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">writer</span><span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">auth_result</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s2">&quot;Auth failed&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">auth_result</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s2">&quot;Auth failed (too many attempts)&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">reason</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="n">auth_result</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="n">reason</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="VNCClient.read"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.read">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateType</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">type_id</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">update_type</span> <span class="o">=</span> <span class="n">UpdateType</span><span class="p">(</span><span class="n">type_id</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No such type_id: type_id: </span><span class="si">{</span><span class="n">type_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">skip_to_eof</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">update_type</span> <span class="ow">is</span> <span class="n">UpdateType</span><span class="o">.</span><span class="n">CLIPBOARD</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># padding</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clipboard</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="k">await</span> <span class="n">read_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="s2">&quot;latin-1&quot;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">update_type</span> <span class="ow">is</span> <span class="n">UpdateType</span><span class="o">.</span><span class="n">VIDEO</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">readexactly</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># padding</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="k">await</span> <span class="n">read_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="mi">2</span><span class="p">)):</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;read update type error: type_id: </span><span class="si">{</span><span class="n">type_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">skip_to_eof</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">update_type</span></div>
+
+<div class="viewcode-block" id="VNCClient.screenshot"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.screenshot">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">screenshot</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">width</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">height</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">update_type</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">update_type</span> <span class="ow">is</span> <span class="n">UpdateType</span><span class="o">.</span><span class="n">VIDEO</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">is_complete</span><span class="p">():</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">as_rgba</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCClient.disconnect"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCClient.disconnect">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">feed_eof</span><span class="p">()</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">writer</span><span class="o">.</span><span class="n">wait_closed</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="VNCFrame"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame">[docs]</a><span class="k">class</span> <span class="nc">VNCFrame</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The VNC frame for rendering the VNC screen.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">size_hint</span><span class="p">:</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">enable_selection</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_selecting</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span> <span class="o">=</span> <span class="n">enable_selection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">ctypes</span>
+
+            <span class="n">scaleFactor</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">shcore</span><span class="o">.</span><span class="n">GetScaleFactorForDevice</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>  <span class="c1"># type: ignore  # noqa: E501</span>
+            <span class="n">size_hint</span> <span class="o">/=</span> <span class="n">scaleFactor</span>
+        <span class="c1"># TODO: Fix the scale factor for Linux and macOS</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_size</span> <span class="o">=</span> <span class="n">size_hint</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;VNC Frame target size: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">target_size</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="VNCFrame.reset"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_selecting</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCFrame.get_cursor_pos"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_cursor_pos">[docs]</a>    <span class="k">def</span> <span class="nf">get_cursor_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cursor_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">cursor_pos</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="ow">or</span> <span class="n">cursor_pos</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="ow">or</span> <span class="n">cursor_pos</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">()</span>
+            <span class="ow">or</span> <span class="n">cursor_pos</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">()</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cursor_pos</span> <span class="o">=</span> <span class="n">Position</span><span class="p">(</span>
+                <span class="nb">int</span><span class="p">(</span><span class="n">cursor_pos</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">),</span>
+                <span class="nb">int</span><span class="p">(</span><span class="n">cursor_pos</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">cursor_pos</span></div>
+
+<div class="viewcode-block" id="VNCFrame.mousePressEvent"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mousePressEvent">[docs]</a>    <span class="k">def</span> <span class="nf">mousePressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Capture the starting point of the selection.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">MouseButton</span><span class="o">.</span><span class="n">LeftButton</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_selecting</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">MouseButton</span><span class="o">.</span><span class="n">RightButton</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCFrame.mouseMoveEvent"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseMoveEvent">[docs]</a>    <span class="k">def</span> <span class="nf">mouseMoveEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update the selection end point and repaint the widget.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_selecting</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_selection_rect</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCFrame.mouseReleaseEvent"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseReleaseEvent">[docs]</a>    <span class="k">def</span> <span class="nf">mouseReleaseEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Finalize the selection on mouse release.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span>
+            <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">MouseButton</span><span class="o">.</span><span class="n">LeftButton</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_selecting</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_selecting</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_selection_rect</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_update_selection_rect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="o">.</span><span class="n">x</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setLeft</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span><span class="o">.</span><span class="n">x</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setRight</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="o">.</span><span class="n">x</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setLeft</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="o">.</span><span class="n">x</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setRight</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span><span class="o">.</span><span class="n">x</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="o">.</span><span class="n">y</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setTop</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setBottom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setTop</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end_pos</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">setBottom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_pos</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+
+<div class="viewcode-block" id="VNCFrame.paintEvent"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.paintEvent">[docs]</a>    <span class="k">def</span> <span class="nf">paintEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">paintEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">():</span>
+            <span class="n">painter</span> <span class="o">=</span> <span class="n">QPainter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="n">pen</span> <span class="o">=</span> <span class="n">QPen</span><span class="p">(</span><span class="n">QColor</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">PenStyle</span><span class="o">.</span><span class="n">SolidLine</span><span class="p">)</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="p">)</span>
+
+            <span class="n">font</span> <span class="o">=</span> <span class="n">QFont</span><span class="p">()</span>
+            <span class="n">font</span><span class="o">.</span><span class="n">setPointSize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">drawText</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">()</span> <span class="o">+</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span>
+                <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">drawText</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">bottomRight</span><span class="p">()</span> <span class="o">+</span> <span class="n">QPoint</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+                <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">bottomRight</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">bottomRight</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="VNCFrame.get_selection"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_selection">[docs]</a>    <span class="k">def</span> <span class="nf">get_selection</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the coordinates of the selection.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_selection</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">():</span>
+            <span class="k">return</span> <span class="p">(</span>
+                <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">),</span>
+                <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">),</span>
+                <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">),</span>
+                <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selection_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="VNCFrame.update"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCFrame.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qimage</span><span class="p">):</span>
+        <span class="n">scaled_qimage</span> <span class="o">=</span> <span class="n">qimage</span><span class="o">.</span><span class="n">scaled</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">target_size</span><span class="p">,</span>
+            <span class="n">Qt</span><span class="o">.</span><span class="n">AspectRatioMode</span><span class="o">.</span><span class="n">KeepAspectRatio</span><span class="p">,</span>
+            <span class="n">Qt</span><span class="o">.</span><span class="n">TransformationMode</span><span class="o">.</span><span class="n">SmoothTransformation</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
+            <span class="n">scaled_qimage</span><span class="o">.</span><span class="n">width</span><span class="p">()</span> <span class="o">/</span> <span class="n">qimage</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span>
+            <span class="n">scaled_qimage</span><span class="o">.</span><span class="n">height</span><span class="p">()</span> <span class="o">/</span> <span class="n">qimage</span><span class="o">.</span><span class="n">height</span><span class="p">(),</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setFixedSize</span><span class="p">(</span><span class="n">scaled_qimage</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">QPixmap</span><span class="o">.</span><span class="n">fromImage</span><span class="p">(</span><span class="n">scaled_qimage</span><span class="p">))</span></div></div>
+
+
+<div class="viewcode-block" id="VNCStreamer"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer">[docs]</a><span class="k">class</span> <span class="nc">VNCStreamer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env_server_addr</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vnc_port</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">vnc_password</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">env_server_addr</span> <span class="o">=</span> <span class="n">env_server_addr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vnc_port</span> <span class="o">=</span> <span class="n">vnc_port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vnc_password</span> <span class="o">=</span> <span class="n">vnc_password</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span>
+            <span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">between_callback</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Screen Stream&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="VNCStreamer.start"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="VNCStreamer.stop"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span><span class="o">.</span><span class="n">is_alive</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;VNC thread is not executing&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCStreamer.connect_vnc"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.connect_vnc">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">connect_vnc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Connects to VNC server.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_writer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">open_connection</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">env_server_addr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_port</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span><span class="p">:</span> <span class="n">VNCClient</span> <span class="o">=</span> <span class="k">await</span> <span class="n">VNCClient</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="n">reader</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_writer</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vnc_password</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">ConnectionRefusedError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fail to connect to VNC server: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">video_height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;uint8&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="VNCStreamer.between_callback"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.between_callback">[docs]</a>    <span class="k">def</span> <span class="nf">between_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">()</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="n">loop</span><span class="p">)</span>
+
+        <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_capture_screen</span><span class="p">())</span>
+        <span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCStreamer.reconnect"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.reconnect">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">reconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">connect_vnc</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VNCStreamer.get_current_frame"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.get_current_frame">[docs]</a>    <span class="k">def</span> <span class="nf">get_current_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span></div>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_capture_screen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">connect_vnc</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;VNC client is not connected&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;VNC Streamer started&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGBA2RGB</span><span class="p">)</span>
+                <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fail to capture frame: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;VNC Streamer stopped&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LocalStreamer"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.LocalStreamer">[docs]</a><span class="k">class</span> <span class="nc">LocalStreamer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monitor_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span>
+            <span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_capture_screen</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Screen Stream&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">monitor_idx</span> <span class="o">=</span> <span class="n">monitor_idx</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="LocalStreamer.start"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">video_height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;uint8&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="LocalStreamer.stop"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span><span class="o">.</span><span class="n">is_alive</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;VNC thread is not executing&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">streaming_thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LocalStreamer.get_current_frame"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/vnc_client/index.html#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.get_current_frame">[docs]</a>    <span class="k">def</span> <span class="nf">get_current_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span></div>
+
+    <span class="k">def</span> <span class="nf">_capture_screen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">mss</span><span class="o">.</span><span class="n">mss</span><span class="p">()</span> <span class="k">as</span> <span class="n">sct</span><span class="p">:</span>
+            <span class="n">monitor</span> <span class="o">=</span> <span class="n">sct</span><span class="o">.</span><span class="n">monitors</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">monitor_idx</span><span class="p">]</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Local Streamer started&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_streaming</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">frame</span> <span class="o">=</span> <span class="n">sct</span><span class="o">.</span><span class="n">grab</span><span class="p">(</span><span class="n">monitor</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">frame</span><span class="o">.</span><span class="n">height</span>
+                    <span class="n">frame</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+                    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGRA2RGB</span><span class="p">)</span>
+                    <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">streaming_lock</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fail to capture frame: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Local Streamer stopped&quot;</span><span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

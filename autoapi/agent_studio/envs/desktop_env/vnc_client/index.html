@@ -1,0 +1,1121 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>agent_studio.envs.desktop_env.vnc_client &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/agent_studio/envs/desktop_env/vnc_client/index';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="agent_studio.llm" href="../../../llm/index.html" />
+    <link rel="prev" title="agent_studio.envs.desktop_env.human_interface" href="../human_interface/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../../index.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/autoapi/agent_studio/envs/desktop_env/vnc_client/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>agent_studio.envs.desktop_env.vnc_client</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.logger"><code class="docutils literal notranslate"><span class="pre">logger</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.screen_ratios"><code class="docutils literal notranslate"><span class="pre">screen_ratios</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.video_modes"><code class="docutils literal notranslate"><span class="pre">video_modes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.read_int"><code class="docutils literal notranslate"><span class="pre">read_int()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.read_text"><code class="docutils literal notranslate"><span class="pre">read_text()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.skip_to_eof"><code class="docutils literal notranslate"><span class="pre">skip_to_eof()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.pack_ard"><code class="docutils literal notranslate"><span class="pre">pack_ard()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Position"><code class="docutils literal notranslate"><span class="pre">Position</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Position.width"><code class="docutils literal notranslate"><span class="pre">Position.width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Position.height"><code class="docutils literal notranslate"><span class="pre">Position.height</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard"><code class="docutils literal notranslate"><span class="pre">Clipboard</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.writer"><code class="docutils literal notranslate"><span class="pre">Clipboard.writer</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.text"><code class="docutils literal notranslate"><span class="pre">Clipboard.text</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.write"><code class="docutils literal notranslate"><span class="pre">Clipboard.write()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen"><code class="docutils literal notranslate"><span class="pre">Screen</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.slices"><code class="docutils literal notranslate"><span class="pre">Screen.slices</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.score"><code class="docutils literal notranslate"><span class="pre">Screen.score</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.x"><code class="docutils literal notranslate"><span class="pre">Screen.x</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.y"><code class="docutils literal notranslate"><span class="pre">Screen.y</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.width"><code class="docutils literal notranslate"><span class="pre">Screen.width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.height"><code class="docutils literal notranslate"><span class="pre">Screen.height</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video"><code class="docutils literal notranslate"><span class="pre">Video</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.reader"><code class="docutils literal notranslate"><span class="pre">Video.reader</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.writer"><code class="docutils literal notranslate"><span class="pre">Video.writer</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.decompress"><code class="docutils literal notranslate"><span class="pre">Video.decompress</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.name"><code class="docutils literal notranslate"><span class="pre">Video.name</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.width"><code class="docutils literal notranslate"><span class="pre">Video.width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.height"><code class="docutils literal notranslate"><span class="pre">Video.height</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.mode"><code class="docutils literal notranslate"><span class="pre">Video.mode</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.data"><code class="docutils literal notranslate"><span class="pre">Video.data</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.bypp"><code class="docutils literal notranslate"><span class="pre">Video.bypp</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.now_encoding"><code class="docutils literal notranslate"><span class="pre">Video.now_encoding</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.create"><code class="docutils literal notranslate"><span class="pre">Video.create()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.refresh"><code class="docutils literal notranslate"><span class="pre">Video.refresh()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.read"><code class="docutils literal notranslate"><span class="pre">Video.read()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.as_rgba"><code class="docutils literal notranslate"><span class="pre">Video.as_rgba()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.is_complete"><code class="docutils literal notranslate"><span class="pre">Video.is_complete()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType"><code class="docutils literal notranslate"><span class="pre">UpdateType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType.VIDEO"><code class="docutils literal notranslate"><span class="pre">UpdateType.VIDEO</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType.CLIPBOARD"><code class="docutils literal notranslate"><span class="pre">UpdateType.CLIPBOARD</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient"><code class="docutils literal notranslate"><span class="pre">VNCClient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.reader"><code class="docutils literal notranslate"><span class="pre">VNCClient.reader</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.writer"><code class="docutils literal notranslate"><span class="pre">VNCClient.writer</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.clipboard"><code class="docutils literal notranslate"><span class="pre">VNCClient.clipboard</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.video"><code class="docutils literal notranslate"><span class="pre">VNCClient.video</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.host_key"><code class="docutils literal notranslate"><span class="pre">VNCClient.host_key</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.create"><code class="docutils literal notranslate"><span class="pre">VNCClient.create()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.read"><code class="docutils literal notranslate"><span class="pre">VNCClient.read()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.screenshot"><code class="docutils literal notranslate"><span class="pre">VNCClient.screenshot()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.disconnect"><code class="docutils literal notranslate"><span class="pre">VNCClient.disconnect()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame"><code class="docutils literal notranslate"><span class="pre">VNCFrame</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.reset"><code class="docutils literal notranslate"><span class="pre">VNCFrame.reset()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_cursor_pos"><code class="docutils literal notranslate"><span class="pre">VNCFrame.get_cursor_pos()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mousePressEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.mousePressEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseMoveEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.mouseMoveEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseReleaseEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.mouseReleaseEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.paintEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.paintEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_selection"><code class="docutils literal notranslate"><span class="pre">VNCFrame.get_selection()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.update"><code class="docutils literal notranslate"><span class="pre">VNCFrame.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer"><code class="docutils literal notranslate"><span class="pre">VNCStreamer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.start"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.start()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.stop"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.stop()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.connect_vnc"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.connect_vnc()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.between_callback"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.between_callback()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.reconnect"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.reconnect()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.get_current_frame"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.get_current_frame()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer"><code class="docutils literal notranslate"><span class="pre">LocalStreamer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.start"><code class="docutils literal notranslate"><span class="pre">LocalStreamer.start()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.stop"><code class="docutils literal notranslate"><span class="pre">LocalStreamer.stop()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.get_current_frame"><code class="docutils literal notranslate"><span class="pre">LocalStreamer.get_current_frame()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-agent_studio.envs.desktop_env.vnc_client">
+<span id="agent-studio-envs-desktop-env-vnc-client"></span><h1><a class="reference internal" href="#module-agent_studio.envs.desktop_env.vnc_client" title="agent_studio.envs.desktop_env.vnc_client"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env.vnc_client</span></code></a><a class="headerlink" href="#module-agent_studio.envs.desktop_env.vnc_client" title="Permalink to this heading">#</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Position" title="agent_studio.envs.desktop_env.vnc_client.Position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Position</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard" title="agent_studio.envs.desktop_env.vnc_client.Clipboard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clipboard</span></code></a></p></td>
+<td><p>Shared clipboard.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Screen" title="agent_studio.envs.desktop_env.vnc_client.Screen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Screen</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Video" title="agent_studio.envs.desktop_env.vnc_client.Video"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Video</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType" title="agent_studio.envs.desktop_env.vnc_client.UpdateType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateType</span></code></a></p></td>
+<td><p>Update from server to client.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient" title="agent_studio.envs.desktop_env.vnc_client.VNCClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VNCClient</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame" title="agent_studio.envs.desktop_env.vnc_client.VNCFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VNCFrame</span></code></a></p></td>
+<td><p>The VNC frame for rendering the VNC screen.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer" title="agent_studio.envs.desktop_env.vnc_client.VNCStreamer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VNCStreamer</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer" title="agent_studio.envs.desktop_env.vnc_client.LocalStreamer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalStreamer</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.read_int" title="agent_studio.envs.desktop_env.vnc_client.read_int"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_int</span></code></a>(→ int)</p></td>
+<td><p>Reads, unpacks, and returns an integer of <em>length</em> bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.read_text" title="agent_studio.envs.desktop_env.vnc_client.read_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_text</span></code></a>(→ str)</p></td>
+<td><p>Reads, unpacks, and returns length-prefixed text.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.skip_to_eof" title="agent_studio.envs.desktop_env.vnc_client.skip_to_eof"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skip_to_eof</span></code></a>(reader)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.pack_ard" title="agent_studio.envs.desktop_env.vnc_client.pack_ard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pack_ard</span></code></a>(data)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.logger" title="agent_studio.envs.desktop_env.vnc_client.logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logger</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.screen_ratios" title="agent_studio.envs.desktop_env.vnc_client.screen_ratios"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen_ratios</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.video_modes" title="agent_studio.envs.desktop_env.vnc_client.video_modes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">video_modes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.logger">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">logger</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.logger" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.screen_ratios">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">screen_ratios</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">fractions.Fraction</span><span class="p"><span class="pre">]</span></span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#screen_ratios"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.screen_ratios" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.video_modes">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">video_modes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#video_modes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.video_modes" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.read_int">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">read_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#read_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.read_int" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads, unpacks, and returns an integer of <em>length</em> bytes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.read_text">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">read_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#read_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.read_text" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads, unpacks, and returns length-prefixed text.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.skip_to_eof">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">skip_to_eof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamReader</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#skip_to_eof"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.skip_to_eof" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.pack_ard">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">pack_ard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#pack_ard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.pack_ard" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Position">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">Position</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Position" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Position.width">
+<span class="sig-name descname"><span class="pre">width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Position.width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Position.width" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Position.height">
+<span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Position.height"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Position.height" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Clipboard">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">Clipboard</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Clipboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard" title="Permalink to this definition">#</a></dt>
+<dd><p>Shared clipboard.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Clipboard.writer">
+<span class="sig-name descname"><span class="pre">writer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">asyncio.StreamWriter</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Clipboard.writer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.writer" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Clipboard.text">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Clipboard.text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.text" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Clipboard.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Clipboard.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.write" title="Permalink to this definition">#</a></dt>
+<dd><p>Sends clipboard text to the server.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">Screen</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen.slices">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">slices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">slice</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">slice</span><span class="p"><span class="pre">]</span></span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen.slices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen.slices" title="Permalink to this definition">#</a></dt>
+<dd><p>Object that can be used to crop the video buffer to this screen.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen.score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen.score"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen.score" title="Permalink to this definition">#</a></dt>
+<dd><p>E501
+is proportional to its pixel area. For non-standard aspect ratios, the score is further multiplied by the ratio  # noqa: E501
+or its reciprocal, whichever is smaller.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A measure of our confidence that this represents a real screen. For screens with standard aspect ratios, this  # noqa</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen.x"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen.x" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen.y"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen.y" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen.width">
+<span class="sig-name descname"><span class="pre">width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen.width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen.width" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Screen.height">
+<span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Screen.height"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Screen.height" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">Video</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.reader">
+<span class="sig-name descname"><span class="pre">reader</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">asyncio.StreamReader</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.reader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.reader" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.writer">
+<span class="sig-name descname"><span class="pre">writer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">asyncio.StreamWriter</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.writer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.writer" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.decompress">
+<span class="sig-name descname"><span class="pre">decompress</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.decompress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.decompress" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.width">
+<span class="sig-name descname"><span class="pre">width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.width" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.height">
+<span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.height"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.height" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.mode">
+<span class="sig-name descname"><span class="pre">mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.mode" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.bypp">
+<span class="sig-name descname"><span class="pre">bypp</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.bypp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.bypp" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.now_encoding">
+<span class="sig-name descname"><span class="pre">now_encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.now_encoding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.now_encoding" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamWriter</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Video" title="agent_studio.envs.desktop_env.vnc_client.Video"><span class="pre">Video</span></a></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.create" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.refresh">
+<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.refresh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.refresh" title="Permalink to this definition">#</a></dt>
+<dd><p>Sends a video buffer update request to the server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.read" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.as_rgba">
+<span class="sig-name descname"><span class="pre">as_rgba</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.as_rgba"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.as_rgba" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the video buffer as a 3D RGBA array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.Video.is_complete">
+<span class="sig-name descname"><span class="pre">is_complete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#Video.is_complete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.Video.is_complete" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns true if the video buffer is entirely opaque.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.UpdateType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">UpdateType</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#UpdateType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Update from server to client.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.UpdateType.VIDEO">
+<span class="sig-name descname"><span class="pre">VIDEO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#UpdateType.VIDEO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType.VIDEO" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.UpdateType.CLIPBOARD">
+<span class="sig-name descname"><span class="pre">CLIPBOARD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#UpdateType.CLIPBOARD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType.CLIPBOARD" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">VNCClient</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.reader">
+<span class="sig-name descname"><span class="pre">reader</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">asyncio.StreamReader</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.reader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.reader" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.writer">
+<span class="sig-name descname"><span class="pre">writer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">asyncio.StreamWriter</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.writer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.writer" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.clipboard">
+<span class="sig-name descname"><span class="pre">clipboard</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard" title="agent_studio.envs.desktop_env.vnc_client.Clipboard"><span class="pre">Clipboard</span></a></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.clipboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.clipboard" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.video">
+<span class="sig-name descname"><span class="pre">video</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.Video" title="agent_studio.envs.desktop_env.vnc_client.Video"><span class="pre">Video</span></a></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.video" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.host_key">
+<span class="sig-name descname"><span class="pre">host_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">cryptography.hazmat.primitives.asymmetric.rsa.RSAPublicKey</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.host_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.host_key" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">asyncio.StreamWriter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cryptography.hazmat.primitives.asymmetric.rsa.RSAPublicKey</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient" title="agent_studio.envs.desktop_env.vnc_client.VNCClient"><span class="pre">VNCClient</span></a></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.create" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType" title="agent_studio.envs.desktop_env.vnc_client.UpdateType"><span class="pre">UpdateType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.read" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.screenshot">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.screenshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.screenshot" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCClient.disconnect">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCClient.disconnect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.disconnect" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">VNCFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_hint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PyQt6.QtCore.QSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtWidgets.QLabel</span></code></p>
+<p>The VNC frame for rendering the VNC screen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.reset" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_cursor_pos">
+<span class="sig-name descname"><span class="pre">get_cursor_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.get_cursor_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_cursor_pos" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.mousePressEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mousePressEvent" title="Permalink to this definition">#</a></dt>
+<dd><p>Capture the starting point of the selection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.mouseMoveEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseMoveEvent" title="Permalink to this definition">#</a></dt>
+<dd><p>Update the selection end point and repaint the widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.mouseReleaseEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseReleaseEvent" title="Permalink to this definition">#</a></dt>
+<dd><p>Finalize the selection on mouse release.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.paintEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.paintEvent" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_selection">
+<span class="sig-name descname"><span class="pre">get_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.get_selection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_selection" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the coordinates of the selection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCFrame.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qimage</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCFrame.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.update" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">VNCStreamer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_server_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vnc_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vnc_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.start" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.stop" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer.connect_vnc">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect_vnc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer.connect_vnc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.connect_vnc" title="Permalink to this definition">#</a></dt>
+<dd><p>Connects to VNC server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer.between_callback">
+<span class="sig-name descname"><span class="pre">between_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer.between_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.between_callback" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer.reconnect">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer.reconnect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.reconnect" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.VNCStreamer.get_current_frame">
+<span class="sig-name descname"><span class="pre">get_current_frame</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#VNCStreamer.get_current_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.get_current_frame" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.LocalStreamer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.vnc_client.</span></span><span class="sig-name descname"><span class="pre">LocalStreamer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">monitor_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#LocalStreamer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.LocalStreamer.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#LocalStreamer.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.start" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.LocalStreamer.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#LocalStreamer.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.stop" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.vnc_client.LocalStreamer.get_current_frame">
+<span class="sig-name descname"><span class="pre">get_current_frame</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/vnc_client.html#LocalStreamer.get_current_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.get_current_frame" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../human_interface/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env.human_interface</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../llm/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.logger"><code class="docutils literal notranslate"><span class="pre">logger</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.screen_ratios"><code class="docutils literal notranslate"><span class="pre">screen_ratios</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.video_modes"><code class="docutils literal notranslate"><span class="pre">video_modes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.read_int"><code class="docutils literal notranslate"><span class="pre">read_int()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.read_text"><code class="docutils literal notranslate"><span class="pre">read_text()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.skip_to_eof"><code class="docutils literal notranslate"><span class="pre">skip_to_eof()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.pack_ard"><code class="docutils literal notranslate"><span class="pre">pack_ard()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Position"><code class="docutils literal notranslate"><span class="pre">Position</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Position.width"><code class="docutils literal notranslate"><span class="pre">Position.width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Position.height"><code class="docutils literal notranslate"><span class="pre">Position.height</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard"><code class="docutils literal notranslate"><span class="pre">Clipboard</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.writer"><code class="docutils literal notranslate"><span class="pre">Clipboard.writer</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.text"><code class="docutils literal notranslate"><span class="pre">Clipboard.text</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Clipboard.write"><code class="docutils literal notranslate"><span class="pre">Clipboard.write()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen"><code class="docutils literal notranslate"><span class="pre">Screen</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.slices"><code class="docutils literal notranslate"><span class="pre">Screen.slices</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.score"><code class="docutils literal notranslate"><span class="pre">Screen.score</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.x"><code class="docutils literal notranslate"><span class="pre">Screen.x</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.y"><code class="docutils literal notranslate"><span class="pre">Screen.y</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.width"><code class="docutils literal notranslate"><span class="pre">Screen.width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Screen.height"><code class="docutils literal notranslate"><span class="pre">Screen.height</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video"><code class="docutils literal notranslate"><span class="pre">Video</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.reader"><code class="docutils literal notranslate"><span class="pre">Video.reader</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.writer"><code class="docutils literal notranslate"><span class="pre">Video.writer</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.decompress"><code class="docutils literal notranslate"><span class="pre">Video.decompress</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.name"><code class="docutils literal notranslate"><span class="pre">Video.name</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.width"><code class="docutils literal notranslate"><span class="pre">Video.width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.height"><code class="docutils literal notranslate"><span class="pre">Video.height</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.mode"><code class="docutils literal notranslate"><span class="pre">Video.mode</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.data"><code class="docutils literal notranslate"><span class="pre">Video.data</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.bypp"><code class="docutils literal notranslate"><span class="pre">Video.bypp</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.now_encoding"><code class="docutils literal notranslate"><span class="pre">Video.now_encoding</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.create"><code class="docutils literal notranslate"><span class="pre">Video.create()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.refresh"><code class="docutils literal notranslate"><span class="pre">Video.refresh()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.read"><code class="docutils literal notranslate"><span class="pre">Video.read()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.as_rgba"><code class="docutils literal notranslate"><span class="pre">Video.as_rgba()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.Video.is_complete"><code class="docutils literal notranslate"><span class="pre">Video.is_complete()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType"><code class="docutils literal notranslate"><span class="pre">UpdateType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType.VIDEO"><code class="docutils literal notranslate"><span class="pre">UpdateType.VIDEO</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.UpdateType.CLIPBOARD"><code class="docutils literal notranslate"><span class="pre">UpdateType.CLIPBOARD</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient"><code class="docutils literal notranslate"><span class="pre">VNCClient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.reader"><code class="docutils literal notranslate"><span class="pre">VNCClient.reader</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.writer"><code class="docutils literal notranslate"><span class="pre">VNCClient.writer</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.clipboard"><code class="docutils literal notranslate"><span class="pre">VNCClient.clipboard</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.video"><code class="docutils literal notranslate"><span class="pre">VNCClient.video</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.host_key"><code class="docutils literal notranslate"><span class="pre">VNCClient.host_key</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.create"><code class="docutils literal notranslate"><span class="pre">VNCClient.create()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.read"><code class="docutils literal notranslate"><span class="pre">VNCClient.read()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.screenshot"><code class="docutils literal notranslate"><span class="pre">VNCClient.screenshot()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCClient.disconnect"><code class="docutils literal notranslate"><span class="pre">VNCClient.disconnect()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame"><code class="docutils literal notranslate"><span class="pre">VNCFrame</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.reset"><code class="docutils literal notranslate"><span class="pre">VNCFrame.reset()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_cursor_pos"><code class="docutils literal notranslate"><span class="pre">VNCFrame.get_cursor_pos()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mousePressEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.mousePressEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseMoveEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.mouseMoveEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.mouseReleaseEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.mouseReleaseEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.paintEvent"><code class="docutils literal notranslate"><span class="pre">VNCFrame.paintEvent()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.get_selection"><code class="docutils literal notranslate"><span class="pre">VNCFrame.get_selection()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCFrame.update"><code class="docutils literal notranslate"><span class="pre">VNCFrame.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer"><code class="docutils literal notranslate"><span class="pre">VNCStreamer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.start"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.start()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.stop"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.stop()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.connect_vnc"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.connect_vnc()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.between_callback"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.between_callback()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.reconnect"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.reconnect()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.VNCStreamer.get_current_frame"><code class="docutils literal notranslate"><span class="pre">VNCStreamer.get_current_frame()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer"><code class="docutils literal notranslate"><span class="pre">LocalStreamer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.start"><code class="docutils literal notranslate"><span class="pre">LocalStreamer.start()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.stop"><code class="docutils literal notranslate"><span class="pre">LocalStreamer.stop()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.vnc_client.LocalStreamer.get_current_frame"><code class="docutils literal notranslate"><span class="pre">LocalStreamer.get_current_frame()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
