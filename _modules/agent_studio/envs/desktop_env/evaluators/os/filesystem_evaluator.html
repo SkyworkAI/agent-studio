@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../../_static/doctools.js"></script>
+    <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator';</script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../../autoapi/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/envs/desktop_env/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">configparser</span>
+<span class="kn">import</span> <span class="nn">filecmp</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">stat</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.evaluators.evaluator</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Evaluator</span><span class="p">,</span>
+    <span class="n">FeedbackException</span><span class="p">,</span>
+    <span class="n">evaluation_handler</span><span class="p">,</span>
+    <span class="n">reset_handler</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.utils.human_utils</span> <span class="kn">import</span> <span class="n">confirm_action</span>
+
+<span class="c1"># TODO: support for Windows</span>
+
+<div class="viewcode-block" id="logger"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.logger">[docs]</a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="FilesystemEvaluator"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator">[docs]</a><span class="k">class</span> <span class="nc">FilesystemEvaluator</span><span class="p">(</span><span class="n">Evaluator</span><span class="p">):</span>
+<div class="viewcode-block" id="FilesystemEvaluator.name"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.name">[docs]</a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;filesystem&quot;</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">eval_procedure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+        <span class="n">reset_procedure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">eval_procedure</span><span class="o">=</span><span class="n">eval_procedure</span><span class="p">,</span>
+            <span class="n">reset_procedure</span><span class="o">=</span><span class="n">reset_procedure</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;exists&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.exists"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.exists">[docs]</a>    <span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">file_to_check</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">expected</span> <span class="ow">in</span> <span class="n">file_to_check</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">expected</span> <span class="o">!=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> existence. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="ow">not</span><span class="w"> </span><span class="n">expected</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;type_check&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.type_check"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.type_check">[docs]</a>    <span class="k">def</span> <span class="nf">type_check</span><span class="p">(</span><span class="n">file_to_check</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">expected_type</span> <span class="ow">in</span> <span class="n">file_to_check</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">expected_type</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+                    <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> type. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_type</span><span class="si">}</span><span class="s2">, but get: folder&quot;</span>
+                    <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">expected_type</span> <span class="o">==</span> <span class="s2">&quot;folder&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+                    <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> type. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_type</span><span class="si">}</span><span class="s2">, but get: file&quot;</span>
+                    <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown type </span><span class="si">{</span><span class="n">expected_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;permissions_check&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.permissions_check"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.permissions_check">[docs]</a>    <span class="k">def</span> <span class="nf">permissions_check</span><span class="p">(</span><span class="n">file_to_check</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">expected_permissions</span> <span class="ow">in</span> <span class="n">file_to_check</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># Compare permissions as octal</span>
+                    <span class="n">st_mode</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">st_mode</span> <span class="o">&amp;</span> <span class="mo">0o777</span>
+                    <span class="k">if</span> <span class="n">st_mode</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">expected_permissions</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
+                        <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> permissions. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_permissions</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="nb">oct</span><span class="p">(</span><span class="n">st_mode</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="p">)</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="c1"># Convert permissions to a readable format</span>
+                    <span class="n">st_mode</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">st_mode</span>
+                    <span class="n">actual_permissions</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">filemode</span><span class="p">(</span><span class="n">st_mode</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">actual_permissions</span> <span class="o">!=</span> <span class="n">expected_permissions</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> permissions. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_permissions</span><span class="si">}</span><span class="s2">, &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;but get: </span><span class="si">{</span><span class="n">actual_permissions</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="p">)</span>
+                <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> permissions. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Can&#39;t access path.&quot;</span>
+                    <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Permissions check is not supported on this platform.&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;content_check&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.content_check"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.content_check">[docs]</a>    <span class="k">def</span> <span class="nf">content_check</span><span class="p">(</span><span class="n">file_to_check</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;exact&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">expected_content</span> <span class="ow">in</span> <span class="n">file_to_check</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;exact&quot;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">content</span> <span class="o">!=</span> <span class="n">expected_content</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> content. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_content</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="p">)</span>
+                <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;strip&quot;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="n">expected_content</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+                        <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> content. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_content</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown content_check method: </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> content. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Can&#39;t access path.&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;metadata_check&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.metadata_check"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.metadata_check">[docs]</a>    <span class="k">def</span> <span class="nf">metadata_check</span><span class="p">(</span><span class="n">file_to_check</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check file metadata.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            file_to_check: dict[str, dict]:</span>
+<span class="sd">                Dictionary with file path as key and metadata as value.</span>
+<span class="sd">                Metadata is a dictionary with keys:</span>
+<span class="sd">                last_modified, creation_time, size, owner, group.</span>
+<span class="sd">                last_modified and creation_time are in ISO format.</span>
+<span class="sd">                size is in bytes.</span>
+<span class="sd">                owner and group are strings.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            FeedbackException: If metadata doesn&#39;t match expected values.</span>
+
+<span class="sd">        Example::</span>
+
+<span class="sd">            file_to_check = {</span>
+<span class="sd">                &quot;tmp/test.txt&quot;: {</span>
+<span class="sd">                    &quot;last_modified&quot;: &quot;2021-09-01T12:00:00&quot;,</span>
+<span class="sd">                    &quot;creation_time&quot;: &quot;2021-09-01T12:00:00&quot;,</span>
+<span class="sd">                    &quot;size&quot;: 1000,</span>
+<span class="sd">                    &quot;owner&quot;: &quot;user&quot;,</span>
+<span class="sd">                    &quot;group&quot;: &quot;group&quot;</span>
+<span class="sd">                }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">_compare_time</span><span class="p">(</span><span class="n">file_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">expected_iso_time</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="n">file_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">file_time</span><span class="p">)</span>
+            <span class="n">expected_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">expected_iso_time</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">file_datetime</span> <span class="o">==</span> <span class="n">expected_datetime</span>
+
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">metadata</span> <span class="ow">in</span> <span class="n">file_to_check</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="n">file_stat</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">metadata</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;last_modified&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="n">_compare_time</span><span class="p">(</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+                            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                                <span class="sa">f</span><span class="s2">&quot;The error occurred &quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> last modified time. &quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_mtime</span><span class="si">}</span><span class="s2">&quot;</span>
+                            <span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;creation_time&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="n">_compare_time</span><span class="p">(</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_ctime</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+                            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                                <span class="sa">f</span><span class="s2">&quot;The error occurred &quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> creation time. &quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_ctime</span><span class="si">}</span><span class="s2">&quot;</span>
+                            <span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">file_stat</span><span class="o">.</span><span class="n">st_size</span> <span class="o">!=</span> <span class="n">value</span><span class="p">:</span>
+                            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                                <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> size. &quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_size</span><span class="si">}</span><span class="s2">&quot;</span>
+                            <span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;owner&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+                            <span class="kn">import</span> <span class="nn">pwd</span>
+
+                            <span class="n">file_owner</span> <span class="o">=</span> <span class="n">pwd</span><span class="o">.</span><span class="n">getpwuid</span><span class="p">(</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_uid</span><span class="p">)</span><span class="o">.</span><span class="n">pw_name</span>
+                            <span class="k">if</span> <span class="n">file_owner</span> <span class="o">!=</span> <span class="n">value</span><span class="p">:</span>
+                                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                                    <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> owner. &quot;</span>
+                                    <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">file_owner</span><span class="si">}</span><span class="s2">&quot;</span>
+                                <span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                                <span class="s2">&quot;Owner check is not supported on this platform.&quot;</span>
+                            <span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;group&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+                            <span class="kn">import</span> <span class="nn">grp</span>
+
+                            <span class="n">file_group</span> <span class="o">=</span> <span class="n">grp</span><span class="o">.</span><span class="n">getgrgid</span><span class="p">(</span><span class="n">file_stat</span><span class="o">.</span><span class="n">st_gid</span><span class="p">)</span><span class="o">.</span><span class="n">gr_name</span>
+                            <span class="k">if</span> <span class="n">file_group</span> <span class="o">!=</span> <span class="n">value</span><span class="p">:</span>
+                                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                                    <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> group. &quot;</span>
+                                    <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">, but get: </span><span class="si">{</span><span class="n">file_group</span><span class="si">}</span><span class="s2">&quot;</span>
+                                <span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                                <span class="s2">&quot;Group check is not supported on this platform.&quot;</span>
+                            <span class="p">)</span>
+
+            <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> metadata. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Can&#39;t access path.&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;verify_ini&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.verify_ini"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.verify_ini">[docs]</a>    <span class="k">def</span> <span class="nf">verify_ini</span><span class="p">(</span><span class="n">target_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ref_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compare two ini files.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            target_path: str: Path to the target ini file.</span>
+<span class="sd">            ref_path: str: Path to the reference ini file.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            FeedbackException: If the files don&#39;t match.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">_read_ini_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="n">ini_dict</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">section</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">section</span><span class="p">))</span> <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">sections</span><span class="p">()</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">ini_dict</span>
+
+        <span class="n">ref_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">ref_path</span><span class="p">)</span>
+        <span class="n">target_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ref_path</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Reference file </span><span class="si">{</span><span class="n">ref_path</span><span class="si">}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_path</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Target file </span><span class="si">{</span><span class="n">target_path</span><span class="si">}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span>
+        <span class="n">target_ini</span> <span class="o">=</span> <span class="n">_read_ini_file</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span>
+        <span class="n">ref_ini</span> <span class="o">=</span> <span class="n">_read_ini_file</span><span class="p">(</span><span class="n">ref_path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_ini</span> <span class="o">!=</span> <span class="n">ref_ini</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Expect content:</span><span class="se">\n</span><span class="si">{</span><span class="n">ref_ini</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="sa">f</span><span class="s2">&quot;But get: </span><span class="si">{</span><span class="n">target_ini</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;match_file&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.match_file"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.match_file">[docs]</a>    <span class="k">def</span> <span class="nf">match_file</span><span class="p">(</span><span class="n">file_to_check</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">expected_path</span> <span class="ow">in</span> <span class="n">file_to_check</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">expected_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">expected_path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">filecmp</span><span class="o">.</span><span class="n">cmp</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">expected_path</span><span class="p">,</span> <span class="n">shallow</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The error occurred when checking </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">.&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Expected: </span><span class="si">{</span><span class="n">expected_path</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;create_file&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.create_file"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.create_file">[docs]</a>    <span class="k">def</span> <span class="nf">create_file</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">content</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;create_directory&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.create_directory"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.create_directory">[docs]</a>    <span class="k">def</span> <span class="nf">create_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;mkdir&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.mkdir"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.mkdir">[docs]</a>    <span class="k">def</span> <span class="nf">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">dir_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">dir_name</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;rm&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.rm"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.rm">[docs]</a>    <span class="k">def</span> <span class="nf">rm</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nd">@confirm_action</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removing </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">_rm</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> removed&quot;</span><span class="p">)</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removing </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">_rm</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;rmdir&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.rmdir"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.rmdir">[docs]</a>    <span class="k">def</span> <span class="nf">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nd">@confirm_action</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removing </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">_rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> removed&quot;</span><span class="p">)</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removing </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">_rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;rename&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.rename"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.rename">[docs]</a>    <span class="k">def</span> <span class="nf">rename</span><span class="p">(</span><span class="n">old_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">new_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">old_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">old_name</span><span class="p">)</span>
+        <span class="n">new_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">new_name</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">old_name</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;copy&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.copy"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.copy">[docs]</a>    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="n">src</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">src</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+        <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cp </span><span class="si">{</span><span class="n">src</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">dest</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;move&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.move"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.move">[docs]</a>    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">src</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">src</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+        <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mv </span><span class="si">{</span><span class="n">src</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">dest</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;chmod&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="FilesystemEvaluator.chmod"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/os/filesystem_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.os.filesystem_evaluator.FilesystemEvaluator.chmod">[docs]</a>    <span class="k">def</span> <span class="nf">chmod</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Chmod is not supported on this platform.&quot;</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

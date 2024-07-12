@@ -1,0 +1,1312 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agent_studio.envs.desktop_env.agent_interface &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/agent_studio/envs/desktop_env/agent_interface';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../autoapi/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/envs/desktop_env/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../autoapi/agent_studio/utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for agent_studio.envs.desktop_env.agent_interface</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">queue</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">jsonpickle</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyautogui</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">PyQt6.QtCore</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QMutex</span><span class="p">,</span>
+    <span class="n">QObject</span><span class="p">,</span>
+    <span class="n">QSize</span><span class="p">,</span>
+    <span class="n">Qt</span><span class="p">,</span>
+    <span class="n">QThread</span><span class="p">,</span>
+    <span class="n">QTimer</span><span class="p">,</span>
+    <span class="n">QWaitCondition</span><span class="p">,</span>
+    <span class="n">pyqtSignal</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">PyQt6.QtGui</span> <span class="kn">import</span> <span class="n">QColor</span><span class="p">,</span> <span class="n">QImage</span>
+<span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QDialog</span><span class="p">,</span>
+    <span class="n">QHBoxLayout</span><span class="p">,</span>
+    <span class="n">QLabel</span><span class="p">,</span>
+    <span class="n">QLineEdit</span><span class="p">,</span>
+    <span class="n">QListWidget</span><span class="p">,</span>
+    <span class="n">QListWidgetItem</span><span class="p">,</span>
+    <span class="n">QMainWindow</span><span class="p">,</span>
+    <span class="n">QMessageBox</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QStatusBar</span><span class="p">,</span>
+    <span class="n">QTextEdit</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">agent_studio.agent.base_agent</span> <span class="kn">import</span> <span class="n">BaseAgent</span>
+<span class="kn">from</span> <span class="nn">agent_studio.config.config</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.evaluators.evaluator_helper</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">register_evaluators</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.recorder.screen_recorder</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ScreenRecorder</span><span class="p">,</span>
+    <span class="n">VNCRecorder</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.vnc_client</span> <span class="kn">import</span> <span class="n">VNCFrame</span><span class="p">,</span> <span class="n">VNCStreamer</span>
+<span class="kn">from</span> <span class="nn">agent_studio.utils.communication</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AgentStudioEvalRequest</span><span class="p">,</span>
+    <span class="n">AgentStudioResetRequest</span><span class="p">,</span>
+    <span class="n">AgentStudioStatusResponse</span><span class="p">,</span>
+    <span class="n">AgentStudioTextRequest</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.utils.json_utils</span> <span class="kn">import</span> <span class="n">export_trajectories</span><span class="p">,</span> <span class="n">format_json</span><span class="p">,</span> <span class="n">read_jsonl</span>
+
+<div class="viewcode-block" id="config"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.config">[docs]</a><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span></div>
+<div class="viewcode-block" id="logger"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.logger">[docs]</a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></div>
+<div class="viewcode-block" id="REMOTE_SERVER_ADDR"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR">[docs]</a><span class="n">REMOTE_SERVER_ADDR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">env_server_addr</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">env_server_port</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+<div class="viewcode-block" id="FrameBuffer"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.FrameBuffer">[docs]</a><span class="k">class</span> <span class="nc">FrameBuffer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+<div class="viewcode-block" id="FrameBuffer.add_frame"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.add_frame">[docs]</a>    <span class="k">def</span> <span class="nf">add_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">frame_id</span><span class="p">,</span> <span class="n">frame</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="FrameBuffer.clear"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FrameBuffer.get_frames"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.get_frames">[docs]</a>    <span class="k">def</span> <span class="nf">get_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_frame_id</span><span class="p">,</span> <span class="n">end_frame_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">frame</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">start_frame_id</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">end_frame_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">frame</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">end_frame_id</span><span class="p">:</span>
+                        <span class="k">break</span>
+                    <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">frames</span></div></div>
+
+
+<div class="viewcode-block" id="WorkerSignals"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals">[docs]</a><span class="k">class</span> <span class="nc">WorkerSignals</span><span class="p">(</span><span class="n">QObject</span><span class="p">):</span>
+<div class="viewcode-block" id="WorkerSignals.confirm_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.confirm_signal">[docs]</a>    <span class="n">confirm_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.decline_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.decline_signal">[docs]</a>    <span class="n">decline_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.start_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.start_signal">[docs]</a>    <span class="n">start_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.eval_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.eval_signal">[docs]</a>    <span class="n">eval_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.status_bar_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.status_bar_signal">[docs]</a>    <span class="n">status_bar_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.parsed_action_display_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.parsed_action_display_signal">[docs]</a>    <span class="n">parsed_action_display_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.response_display_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.response_display_signal">[docs]</a>    <span class="n">response_display_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.evaluation_display_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.evaluation_display_signal">[docs]</a>    <span class="n">evaluation_display_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.show_dialog_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.show_dialog_signal">[docs]</a>    <span class="n">show_dialog_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.output_display_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.output_display_signal">[docs]</a>    <span class="n">output_display_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.save_trajectory_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.save_trajectory_signal">[docs]</a>    <span class="n">save_trajectory_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">()</span></div>
+<div class="viewcode-block" id="WorkerSignals.finish_run_task_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.finish_run_task_signal">[docs]</a>    <span class="n">finish_run_task_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">()</span></div>
+<div class="viewcode-block" id="WorkerSignals.trajectory_display_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.trajectory_display_signal">[docs]</a>    <span class="n">trajectory_display_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></div>
+<div class="viewcode-block" id="WorkerSignals.generate_action_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.generate_action_signal">[docs]</a>    <span class="n">generate_action_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">()</span></div>
+<div class="viewcode-block" id="WorkerSignals.popup_window_signal"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.popup_window_signal">[docs]</a>    <span class="n">popup_window_signal</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="InputDialog"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.InputDialog">[docs]</a><span class="k">class</span> <span class="nc">InputDialog</span><span class="p">(</span><span class="n">QDialog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Input Dialog&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setModal</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">messageLabel</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">messageLabel</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">inputBox</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputBox</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirmButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Confirm&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirmButton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confirmButton</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlag</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WindowType</span><span class="o">.</span><span class="n">CustomizeWindowHint</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlag</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WindowType</span><span class="o">.</span><span class="n">WindowCloseButtonHint</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<div class="viewcode-block" id="InputDialog.accept"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.InputDialog.accept">[docs]</a>    <span class="k">def</span> <span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="ResetRuntimeThread"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread">[docs]</a><span class="k">class</span> <span class="nc">ResetRuntimeThread</span><span class="p">(</span><span class="n">QThread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signals</span><span class="p">:</span> <span class="n">WorkerSignals</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span> <span class="o">=</span> <span class="n">signals</span>
+
+<div class="viewcode-block" id="ResetRuntimeThread.run"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># reset remote runtime</span>
+        <span class="n">response_raw</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="n">REMOTE_SERVER_ADDR</span><span class="si">}</span><span class="s2">/runtime/reset&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">AgentStudioStatusResponse</span><span class="p">(</span><span class="o">**</span><span class="n">response_raw</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;success&quot;</span>
+        <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Fail to reset runtime: </span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Ready&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">start_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResetRuntimeThread.receive_user_input"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.receive_user_input">[docs]</a>    <span class="k">def</span> <span class="nf">receive_user_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div></div>
+
+
+<div class="viewcode-block" id="ResetTaskThread"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread">[docs]</a><span class="k">class</span> <span class="nc">ResetTaskThread</span><span class="p">(</span><span class="n">QThread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">agent</span><span class="p">:</span> <span class="n">BaseAgent</span><span class="p">,</span>
+        <span class="n">signals</span><span class="p">:</span> <span class="n">WorkerSignals</span><span class="p">,</span>
+        <span class="n">selected_task</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span> <span class="o">=</span> <span class="n">QMutex</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_condition</span> <span class="o">=</span> <span class="n">QWaitCondition</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span> <span class="o">=</span> <span class="n">signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="o">=</span> <span class="n">selected_task</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">agent</span>
+
+    <span class="k">def</span> <span class="nf">_wait_finish</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">AgentStudioStatusResponse</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AgentStudioStatusResponse</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Finished&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">response</span>
+        <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;wait_for_input&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: blue;&quot;</span><span class="p">,</span> <span class="s2">&quot;Waiting for input&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">show_dialog_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wait_condition</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+            <span class="n">user_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_input</span>
+            <span class="n">response_raw</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+                <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="n">REMOTE_SERVER_ADDR</span><span class="si">}</span><span class="s2">/task/confirm&quot;</span><span class="p">,</span>
+                <span class="n">json</span><span class="o">=</span><span class="n">AgentStudioTextRequest</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">user_input</span><span class="p">)</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(),</span>
+            <span class="p">)</span>
+            <span class="k">assert</span> <span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;In Progress&quot;</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">AgentStudioStatusResponse</span><span class="p">(</span><span class="o">**</span><span class="n">response_raw</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait_finish</span><span class="p">(</span><span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown status: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ResetTaskThread.run"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Resetting Agent...&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span>
+            <span class="n">task_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">,</span> <span class="n">registered_evaluators</span><span class="o">=</span><span class="n">register_evaluators</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Resetting Task...&quot;</span><span class="p">)</span>
+        <span class="n">response_raw</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="n">REMOTE_SERVER_ADDR</span><span class="si">}</span><span class="s2">/task/reset&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">AgentStudioResetRequest</span><span class="p">(</span><span class="n">task_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">)</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(),</span>
+        <span class="p">)</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+        <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">AgentStudioStatusResponse</span><span class="p">(</span><span class="o">**</span><span class="n">response_raw</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait_finish</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span> <span class="ow">and</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span> <span class="o">==</span> <span class="s2">&quot;success&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">generate_action_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset task: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">popup_window_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+                <span class="s2">&quot;Error&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Failed to reset task: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResetTaskThread.receive_user_input"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.receive_user_input">[docs]</a>    <span class="k">def</span> <span class="nf">receive_user_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_input</span> <span class="o">=</span> <span class="n">text</span>  <span class="c1"># Store the user input</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_condition</span><span class="o">.</span><span class="n">wakeAll</span><span class="p">()</span>  <span class="c1"># Resume the thread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="GenerateActionThread"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread">[docs]</a><span class="k">class</span> <span class="nc">GenerateActionThread</span><span class="p">(</span><span class="n">QThread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">signals</span><span class="p">:</span> <span class="n">WorkerSignals</span><span class="p">,</span>
+        <span class="n">selected_task</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+        <span class="n">obs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">agent</span><span class="p">:</span> <span class="n">BaseAgent</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span> <span class="o">=</span> <span class="n">signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="o">=</span> <span class="n">selected_task</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">agent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs</span> <span class="o">=</span> <span class="n">obs</span>
+
+<div class="viewcode-block" id="GenerateActionThread.run"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+            <span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Generating action...&quot;</span>
+        <span class="p">)</span>
+
+        <span class="n">response</span><span class="p">,</span> <span class="n">raw_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">generate_action</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+            <span class="s2">&quot;color: blue;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Please Confirm Agent Action&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">parsed_action_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">raw_code</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">response_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">confirm_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">decline_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="EvalTaskThread"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread">[docs]</a><span class="k">class</span> <span class="nc">EvalTaskThread</span><span class="p">(</span><span class="n">QThread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">signals</span><span class="p">:</span> <span class="n">WorkerSignals</span><span class="p">,</span>
+        <span class="n">trajectory_display</span><span class="p">:</span> <span class="n">QTextEdit</span><span class="p">,</span>
+        <span class="n">selected_task</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+        <span class="n">agent</span><span class="p">:</span> <span class="n">BaseAgent</span><span class="p">,</span>
+        <span class="n">result_queue</span><span class="p">:</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">,</span>
+        <span class="n">final_obs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span> <span class="o">=</span> <span class="n">QMutex</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_condition</span> <span class="o">=</span> <span class="n">QWaitCondition</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span> <span class="o">=</span> <span class="n">signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">agent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="o">=</span> <span class="n">selected_task</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span> <span class="o">=</span> <span class="n">trajectory_display</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span> <span class="o">=</span> <span class="n">result_queue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final_obs</span> <span class="o">=</span> <span class="n">final_obs</span>
+
+    <span class="k">def</span> <span class="nf">_wait_finish</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">AgentStudioStatusResponse</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AgentStudioStatusResponse</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Finished&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">response</span>
+        <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;wait_for_input&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: blue;&quot;</span><span class="p">,</span> <span class="s2">&quot;Waiting for input&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">show_dialog_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wait_condition</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+            <span class="n">user_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_input</span>
+            <span class="n">response_raw</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+                <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="n">REMOTE_SERVER_ADDR</span><span class="si">}</span><span class="s2">/task/confirm&quot;</span><span class="p">,</span>
+                <span class="n">json</span><span class="o">=</span><span class="n">AgentStudioTextRequest</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">user_input</span><span class="p">)</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(),</span>
+            <span class="p">)</span>
+            <span class="k">assert</span> <span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;In Progress&quot;</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">AgentStudioStatusResponse</span><span class="p">(</span><span class="o">**</span><span class="n">response_raw</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait_finish</span><span class="p">(</span><span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown status: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="EvalTaskThread.run"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Auto-Evaluating...&quot;</span><span class="p">)</span>
+        <span class="n">response_raw</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="n">REMOTE_SERVER_ADDR</span><span class="si">}</span><span class="s2">/task/eval&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">AgentStudioEvalRequest</span><span class="p">(</span>
+                <span class="n">task_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">,</span>
+                <span class="n">trajectory</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">jsonpickle</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">trajectory</span><span class="p">)),</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(),</span>
+        <span class="p">)</span>
+        <span class="k">assert</span> <span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">response_raw</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">AgentStudioStatusResponse</span><span class="p">(</span><span class="o">**</span><span class="n">response_raw</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait_finish</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+                <span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Self-Evaluating...&quot;</span>
+            <span class="p">)</span>
+            <span class="n">self_eval_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">final_obs</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">self_eval_result</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">evaluation_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+                <span class="s2">&quot;Auto-evaluation result:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Score: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Feedback: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s1">&#39;feedback&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Self-evaluation result:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Score: </span><span class="si">{</span><span class="n">self_eval_result</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Feedback: </span><span class="si">{</span><span class="n">self_eval_result</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+                <span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Saving trajectory...&quot;</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">save_trajectory_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Finished&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">popup_window_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span>
+                <span class="s2">&quot;Error&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Failed to evaluate task: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="EvalTaskThread.receive_user_input"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.receive_user_input">[docs]</a>    <span class="k">def</span> <span class="nf">receive_user_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_input</span> <span class="o">=</span> <span class="n">text</span>  <span class="c1"># Store the user input</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_condition</span><span class="o">.</span><span class="n">wakeAll</span><span class="p">()</span>  <span class="c1"># Resume the thread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="StepActionThread"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.StepActionThread">[docs]</a><span class="k">class</span> <span class="nc">StepActionThread</span><span class="p">(</span><span class="n">QThread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">signals</span><span class="p">:</span> <span class="n">WorkerSignals</span><span class="p">,</span>
+        <span class="n">trajectory_display</span><span class="p">:</span> <span class="n">QTextEdit</span><span class="p">,</span>
+        <span class="n">parsed_action_display</span><span class="p">:</span> <span class="n">QTextEdit</span><span class="p">,</span>
+        <span class="n">screen_recorder</span><span class="p">:</span> <span class="n">ScreenRecorder</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">current_step_num</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">max_steps</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">agent</span><span class="p">:</span> <span class="n">BaseAgent</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span> <span class="o">=</span> <span class="n">signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">agent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span> <span class="o">=</span> <span class="n">trajectory_display</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span> <span class="o">=</span> <span class="n">parsed_action_display</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="o">=</span> <span class="n">screen_recorder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step_num</span> <span class="o">=</span> <span class="n">current_step_num</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span> <span class="o">=</span> <span class="n">max_steps</span>
+
+<div class="viewcode-block" id="StepActionThread.run"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.StepActionThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Steps the next action and adds it to the trajectory.&quot;&quot;&quot;</span>
+        <span class="n">next_action_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="o">.</span><span class="n">toPlainText</span><span class="p">()</span>
+        <span class="n">result</span><span class="p">,</span> <span class="n">done</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">step_action</span><span class="p">(</span><span class="n">confirmed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">output_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">minimal_action_interval</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">next_action_text</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="n">current_trajectory_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="o">.</span><span class="n">toPlainText</span><span class="p">()</span>
+            <span class="n">new_trajectory_text</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">current_trajectory_text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">next_action_text</span>
+                <span class="k">if</span> <span class="n">current_trajectory_text</span>
+                <span class="k">else</span> <span class="n">next_action_text</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">trajectory_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">new_trajectory_text</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">done</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step_num</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">finish_run_task_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">obs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">get_current_frame</span><span class="p">()</span>
+                <span class="k">assert</span> <span class="n">obs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">obs</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">response</span><span class="p">,</span> <span class="n">raw_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">generate_action</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">parsed_action_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">raw_code</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">response_display_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">confirm_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">decline_signal</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="StepActionThread.receive_user_input"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.StepActionThread.receive_user_input">[docs]</a>    <span class="k">def</span> <span class="nf">receive_user_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div></div>
+
+
+<div class="viewcode-block" id="AgentInterface"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface">[docs]</a><span class="k">class</span> <span class="nc">AgentInterface</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<div class="viewcode-block" id="AgentInterface.layout_width"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.layout_width">[docs]</a>    <span class="n">layout_width</span> <span class="o">=</span> <span class="mi">300</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">agent</span><span class="p">:</span> <span class="n">BaseAgent</span><span class="p">,</span>
+        <span class="n">task_configs</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+        <span class="n">record_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">record_path</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">agent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">task</span><span class="p">[</span><span class="s2">&quot;instruction&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">task_configs</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_configs</span> <span class="o">=</span> <span class="n">task_configs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span> <span class="o">=</span> <span class="n">QTimer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refreshing_screen</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># need for refresh flag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="p">:</span> <span class="n">QStatusBar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_status_bar</span><span class="p">:</span> <span class="n">QLabel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_close</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="p">:</span> <span class="n">VNCStreamer</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="p">:</span> <span class="p">(</span>
+            <span class="n">ResetTaskThread</span>
+            <span class="o">|</span> <span class="n">EvalTaskThread</span>
+            <span class="o">|</span> <span class="n">StepActionThread</span>
+            <span class="o">|</span> <span class="n">ResetRuntimeThread</span>
+            <span class="o">|</span> <span class="n">GenerateActionThread</span>
+            <span class="o">|</span> <span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span><span class="p">:</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step_num</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_token_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># screen recorder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">record_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">record_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recording_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="p">:</span> <span class="n">ScreenRecorder</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_meta</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">screen_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_height</span> <span class="o">=</span> <span class="n">pyautogui</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="o">.</span><span class="n">remote</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span> <span class="o">=</span> <span class="n">pyautogui</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setup_ui</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<div class="viewcode-block" id="AgentInterface.setup_ui"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.setup_ui">[docs]</a>    <span class="k">def</span> <span class="nf">setup_ui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets up the UI, including the VNC frame (left) and the right layout.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Remote Agent Interface&quot;</span><span class="p">)</span>
+        <span class="n">central_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">central_widget</span><span class="p">)</span>
+        <span class="n">central_widget</span><span class="o">.</span><span class="n">setMouseTracking</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">main_layout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">(</span><span class="n">central_widget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_status_bar</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Init&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="o">.</span><span class="n">addPermanentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">task_status_bar</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">remote</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="o">=</span> <span class="n">VNCStreamer</span><span class="p">(</span>
+                <span class="n">env_server_addr</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">env_server_addr</span><span class="p">,</span>
+                <span class="n">vnc_port</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">vnc_port</span><span class="p">,</span>
+                <span class="n">vnc_password</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">vnc_password</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="o">.</span><span class="n">video_height</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="o">.</span><span class="n">video_width</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">vnc_layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+            <span class="n">frame_size_hint</span> <span class="o">=</span> <span class="n">QSize</span><span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="o">.</span><span class="n">vnc_frame_size</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc_frame</span> <span class="o">=</span> <span class="n">VNCFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_size_hint</span><span class="p">)</span>
+            <span class="n">vnc_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vnc_frame</span><span class="p">)</span>
+            <span class="n">reconnect_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Re-connect&quot;</span><span class="p">)</span>
+            <span class="n">reconnect_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reconnect</span><span class="p">)</span>
+            <span class="n">vnc_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">reconnect_button</span><span class="p">)</span>
+            <span class="n">main_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">vnc_layout</span><span class="p">)</span>
+
+        <span class="n">agent_layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Model response&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response_display</span> <span class="o">=</span> <span class="n">QTextEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">response_display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response_display</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># self.response_display.setFixedHeight(300)</span>
+
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Parsed Actions&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span> <span class="o">=</span> <span class="n">QTextEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Accept&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Reject&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step_action</span><span class="p">)</span>
+        <span class="c1"># goto evaluation step if user rejects the action</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reject_action</span><span class="p">)</span>
+        <span class="n">consent_button_layout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="n">consent_button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="p">)</span>
+        <span class="n">consent_button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="p">)</span>
+
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">consent_button_layout</span><span class="p">)</span>
+
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Runtime output&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_display</span> <span class="o">=</span> <span class="n">QTextEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># self.output_display.setFixedHeight(40)</span>
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_display</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># interrupt_button = QPushButton(&quot;Interrupt action&quot;)</span>
+        <span class="c1"># interrupt_button.clicked.connect(self.interrupt_action)</span>
+        <span class="c1"># agent_layout.addWidget(interrupt_button)</span>
+
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Trajectory&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span> <span class="o">=</span> <span class="n">QTextEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">agent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># self.trajectory_display.setFixedWidth(self.layout_width)</span>
+
+        <span class="n">main_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">agent_layout</span><span class="p">)</span>
+
+        <span class="n">task_layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Task configuration&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_config_display</span> <span class="o">=</span> <span class="n">QTextEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">task_config_display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_config_display</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># self.task_config_display.setFixedHeight(200)</span>
+        <span class="c1"># self.task_config_display.setFixedWidth(self.layout_width)</span>
+
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Task Selection (double click to select)&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span> <span class="o">=</span> <span class="n">QListWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">itemDoubleClicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">select_task_instruction</span>
+        <span class="p">)</span>
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">populate_instruction_selection_widget</span><span class="p">()</span>
+        <span class="c1"># self.instruction_selection.addItems(self.task_list)</span>
+
+        <span class="n">execution_button_layout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Start&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">run_task</span><span class="p">)</span>
+        <span class="n">execution_button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Evaluate&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eval_task</span><span class="p">)</span>
+        <span class="n">execution_button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="p">)</span>
+
+        <span class="c1"># auto_eval_button = QPushButton(&quot;Auto-evaluate&quot;)</span>
+        <span class="c1"># auto_eval_button.clicked.connect(self.auto_eval)</span>
+        <span class="c1"># agent_layout.addWidget(auto_eval_button)</span>
+
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">execution_button_layout</span><span class="p">)</span>
+
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Evaluation Result&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span> <span class="o">=</span> <span class="n">QTextEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># self.evaluation_display.setFixedHeight(60)</span>
+        <span class="c1"># self.evaluation_display.setFixedWidth(self.layout_width)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Reset&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">)</span>
+        <span class="n">task_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s2">&quot;Ready&quot;</span><span class="p">)</span>
+
+        <span class="n">main_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">task_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setMouseTracking</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.load_task_results"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.load_task_results">[docs]</a>    <span class="k">def</span> <span class="nf">load_task_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">jsonl_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">record_path</span> <span class="o">/</span> <span class="n">config</span><span class="o">.</span><span class="n">result_jsonl_file</span>
+        <span class="k">if</span> <span class="n">jsonl_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">evaluated_tasks</span> <span class="o">=</span> <span class="n">read_jsonl</span><span class="p">(</span><span class="n">jsonl_path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">task_result</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]:</span> <span class="n">task_result</span> <span class="k">for</span> <span class="n">task_result</span> <span class="ow">in</span> <span class="n">evaluated_tasks</span>
+            <span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span> <span class="o">=</span> <span class="p">{}</span></div>
+
+<div class="viewcode-block" id="AgentInterface.populate_instruction_selection_widget"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.populate_instruction_selection_widget">[docs]</a>    <span class="k">def</span> <span class="nf">populate_instruction_selection_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_task_results</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_configs</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">QListWidgetItem</span><span class="p">(</span><span class="n">task</span><span class="p">[</span><span class="s2">&quot;instruction&quot;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">task</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span><span class="p">[</span><span class="n">task</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]][</span><span class="s2">&quot;score&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span>
+                    <span class="n">item</span><span class="o">.</span><span class="n">setForeground</span><span class="p">(</span><span class="n">QColor</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">item</span><span class="o">.</span><span class="n">setForeground</span><span class="p">(</span><span class="n">QColor</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.select_task_instruction"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.select_task_instruction">[docs]</a>    <span class="k">def</span> <span class="nf">select_task_instruction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_instruction</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+        <span class="n">selected_task_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">currentRow</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_configs</span><span class="p">[</span><span class="n">selected_task_idx</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_config_display</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">format_json</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]][</span><span class="s2">&quot;score&quot;</span><span class="p">]</span>
+            <span class="n">feedback</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_results</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]][</span><span class="s2">&quot;feedback&quot;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="sa">f</span><span class="s2">&quot;Feedback: </span><span class="si">{</span><span class="n">feedback</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.set_task_status_bar_text"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.set_task_status_bar_text">[docs]</a>    <span class="k">def</span> <span class="nf">set_task_status_bar_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_status_bar</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_status_bar</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.show_input_dialog"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_input_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_input_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">dlg</span> <span class="o">=</span> <span class="n">InputDialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">dlg</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">QDialog</span><span class="o">.</span><span class="n">DialogCode</span><span class="o">.</span><span class="n">Accepted</span>
+        <span class="n">user_input</span> <span class="o">=</span> <span class="n">dlg</span><span class="o">.</span><span class="n">inputBox</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="p">,</span> <span class="n">ResetTaskThread</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="p">,</span> <span class="n">EvalTaskThread</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">receive_user_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.show_choice_dialog"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_choice_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_choice_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dlg</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Confirm Action&quot;</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">accept</span> <span class="o">=</span> <span class="n">dlg</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s2">&quot;Confirm&quot;</span><span class="p">,</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">ButtonRole</span><span class="o">.</span><span class="n">AcceptRole</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s2">&quot;Reject&quot;</span><span class="p">,</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">ButtonRole</span><span class="o">.</span><span class="n">RejectRole</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">dlg</span><span class="o">.</span><span class="n">clickedButton</span><span class="p">()</span> <span class="o">==</span> <span class="n">accept</span><span class="p">:</span>
+            <span class="n">user_input</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">user_input</span> <span class="o">=</span> <span class="s2">&quot;n&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="p">,</span> <span class="n">ResetTaskThread</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="p">,</span> <span class="n">EvalTaskThread</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">receive_user_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.show_error_popup_dialog"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_error_popup_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_error_popup_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Shows a popup message.&quot;&quot;&quot;</span>
+        <span class="n">dlg</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.reset"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Resets the task and waits for the environment to be ready.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Preparing...&quot;</span><span class="p">)</span>
+        <span class="c1"># Clears all the text fields.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># move to ResetRuntimeThread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_config_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_token_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Reset screen recorder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video_meta</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># Reset remote runtime</span>
+        <span class="n">signals</span> <span class="o">=</span> <span class="n">WorkerSignals</span><span class="p">()</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">start_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="o">=</span> <span class="n">ResetRuntimeThread</span><span class="p">(</span><span class="n">signals</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">populate_instruction_selection_widget</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AgentInterface.reconnect"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reconnect">[docs]</a>    <span class="k">def</span> <span class="nf">reconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s2">&quot;Reconnecting&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="o">=</span> <span class="n">VNCStreamer</span><span class="p">(</span>
+                <span class="n">env_server_addr</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">env_server_addr</span><span class="p">,</span>
+                <span class="n">vnc_port</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">vnc_port</span><span class="p">,</span>
+                <span class="n">vnc_password</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">vnc_password</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="p">,</span> <span class="n">VNCRecorder</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">vnc_streamer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s2">&quot;Connected&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.save_trajectory"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.save_trajectory">[docs]</a>    <span class="k">def</span> <span class="nf">save_trajectory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="p">,</span> <span class="n">EvalTaskThread</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Save trajectory for task: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s1">&#39;task_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">auto_eval_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">export_trajectories</span><span class="p">(</span>
+            <span class="n">self_eval_results</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+            <span class="n">task_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">,</span>
+            <span class="n">trajectory</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">trajectory</span><span class="p">,</span>
+            <span class="n">record_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">record_path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span>
+            <span class="n">score</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">auto_eval_result</span><span class="p">[</span><span class="s2">&quot;score&quot;</span><span class="p">]),</span>
+            <span class="n">feedback</span><span class="o">=</span><span class="n">auto_eval_result</span><span class="p">[</span><span class="s2">&quot;feedback&quot;</span><span class="p">],</span>
+            <span class="n">token_count</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">action_token_count</span><span class="p">,</span>
+            <span class="n">video_meta</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">video_meta</span><span class="p">,</span>
+            <span class="n">jsonl_name</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">result_jsonl_file</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.run_task"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.run_task">[docs]</a>    <span class="k">def</span> <span class="nf">run_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: red;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: No task selected&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">instruction_selection</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Initializing...&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Run task: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s1">&#39;task_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">signals</span> <span class="o">=</span> <span class="n">WorkerSignals</span><span class="p">()</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">show_dialog_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">show_choice_dialog</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">generate_action_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">generate_action</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">popup_window_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">show_error_popup_dialog</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="o">=</span> <span class="n">ResetTaskThread</span><span class="p">(</span>
+            <span class="n">agent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">,</span> <span class="n">signals</span><span class="o">=</span><span class="n">signals</span><span class="p">,</span> <span class="n">selected_task</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AgentInterface.generate_action"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.generate_action">[docs]</a>    <span class="k">def</span> <span class="nf">generate_action</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Generate action for task: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s1">&#39;task_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;visual&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">remote</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="o">=</span> <span class="n">VNCRecorder</span><span class="p">(</span>
+                    <span class="n">fps</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">video_fps</span><span class="p">,</span> <span class="n">vnc_streamer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># assert False, &quot;Local recording is not supported&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="o">=</span> <span class="n">ScreenRecorder</span><span class="p">(</span><span class="n">fps</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">video_fps</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;visual&quot;</span><span class="p">]:</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="n">obs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">get_current_frame</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">obs</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">signals</span> <span class="o">=</span> <span class="n">WorkerSignals</span><span class="p">()</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">confirm_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">decline_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">parsed_action_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="o">.</span><span class="n">setPlainText</span>
+        <span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">response_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">response_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="o">=</span> <span class="n">GenerateActionThread</span><span class="p">(</span>
+            <span class="n">signals</span><span class="o">=</span><span class="n">signals</span><span class="p">,</span>
+            <span class="n">selected_task</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">,</span>
+            <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span>
+            <span class="n">agent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AgentInterface.eval_task"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.eval_task">[docs]</a>    <span class="k">def</span> <span class="nf">eval_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: red;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: No task selected&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Evaluating...&quot;</span><span class="p">)</span>
+
+        <span class="n">signals</span> <span class="o">=</span> <span class="n">WorkerSignals</span><span class="p">()</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">evaluation_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">evaluation_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">show_dialog_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">show_input_dialog</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">save_trajectory_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">save_trajectory</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">popup_window_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">show_error_popup_dialog</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="o">=</span> <span class="n">EvalTaskThread</span><span class="p">(</span>
+            <span class="n">signals</span><span class="o">=</span><span class="n">signals</span><span class="p">,</span>
+            <span class="n">selected_task</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">,</span>
+            <span class="n">agent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">,</span>
+            <span class="n">trajectory_display</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="p">,</span>
+            <span class="n">result_queue</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span><span class="p">,</span>
+            <span class="n">final_obs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">get_current_frame</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span>
+            <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AgentInterface.finish_run_task"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.finish_run_task">[docs]</a>    <span class="k">def</span> <span class="nf">finish_run_task</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_token_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">get_token_count</span><span class="p">()</span>
+        <span class="n">task_trajectory_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">record_path</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;task_id&quot;</span><span class="p">]</span>
+        <span class="n">task_trajectory_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;visual&quot;</span><span class="p">]:</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="n">video_path</span> <span class="o">=</span> <span class="p">(</span><span class="n">task_trajectory_path</span> <span class="o">/</span> <span class="s2">&quot;video.mp4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">wait_exit</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">video_meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">video_path</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Executed&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.reject_action"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reject_action">[docs]</a>    <span class="k">def</span> <span class="nf">reject_action</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Executing...&quot;</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">,</span> <span class="n">done</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">step_action</span><span class="p">(</span><span class="n">confirmed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finish_run_task</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AgentInterface.step_action"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.step_action">[docs]</a>    <span class="k">def</span> <span class="nf">step_action</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Steps the next action and adds it to the trajectory.&quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">(</span><span class="s2">&quot;color: green;&quot;</span><span class="p">,</span> <span class="s2">&quot;Task: Executing...&quot;</span><span class="p">)</span>
+
+        <span class="n">signals</span> <span class="o">=</span> <span class="n">WorkerSignals</span><span class="p">()</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">status_bar_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_task_status_bar_text</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">response_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">response_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">output_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">trajectory_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">parsed_action_display_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="o">.</span><span class="n">setPlainText</span>
+        <span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">confirm_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">decline_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">decline_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">)</span>
+        <span class="n">signals</span><span class="o">.</span><span class="n">finish_run_task_signal</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">finish_run_task</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread_result</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span> <span class="o">=</span> <span class="n">StepActionThread</span><span class="p">(</span>
+            <span class="n">signals</span><span class="o">=</span><span class="n">signals</span><span class="p">,</span>
+            <span class="n">trajectory_display</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">trajectory_display</span><span class="p">,</span>
+            <span class="n">parsed_action_display</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parsed_action_display</span><span class="p">,</span>
+            <span class="n">screen_recorder</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="p">,</span>
+            <span class="n">current_step_num</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current_step_num</span><span class="p">,</span>
+            <span class="n">max_steps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_task</span><span class="p">[</span><span class="s2">&quot;max_steps&quot;</span><span class="p">],</span>
+            <span class="n">agent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step_num</span> <span class="o">+=</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="AgentInterface.interrupt_action"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.interrupt_action">[docs]</a>    <span class="k">def</span> <span class="nf">interrupt_action</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO: send interrupt signal to the runtime</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="AgentInterface.update_screen"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.update_screen">[docs]</a>    <span class="k">def</span> <span class="nf">update_screen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">remote</span><span class="p">:</span>
+                <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">recording_lock</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                    <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="o">.</span><span class="n">get_current_frame</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">frame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">qimage</span> <span class="o">=</span> <span class="n">QImage</span><span class="p">(</span>
+                        <span class="n">frame</span><span class="o">.</span><span class="n">tobytes</span><span class="p">(),</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">video_width</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">video_height</span><span class="p">,</span>
+                        <span class="n">QImage</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">Format_RGB888</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">vnc_frame</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">qimage</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Fail to get screenshot.&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AgentInterface.render"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.render">[docs]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">refreshing_screen</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refreshing_screen</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_screen</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">local_cursor_pos</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_frame</span><span class="o">.</span><span class="n">get_cursor_pos</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cursor Position: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">local_cursor_pos</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refreshing_screen</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="AgentInterface.closeEvent"><a class="viewcode-back" href="../../../../autoapi/agent_studio/envs/desktop_env/agent_interface/index.html#agent_studio.envs.desktop_env.agent_interface.AgentInterface.closeEvent">[docs]</a>    <span class="k">def</span> <span class="nf">closeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s2">&quot;Closing&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_close</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">screen_recorder</span><span class="o">.</span><span class="n">wait_exit</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vnc_thread</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;GUI closed&quot;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

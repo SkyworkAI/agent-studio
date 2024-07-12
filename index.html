@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html class="gpt-theme-light" style="--bigger-text-multiplier: 1.0; --chatgpt-widget-top: 85px; --gpt-ruler-color: #0000004c; --gpt-gmail-compose-btn-display: flex; --gpt-twitter-compose-btn-display: flex; --gpt-outlook-compose-btn-display: inline-block; --gpt-linkedin-compose-btn-display: flex;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>AgentStudio</title>
+    <meta name="description" content="Agent Studio: ntegrating benchmarks, environments, and toolkits for general computer agents">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:image" content="/logo.png">
+    <link rel="shortcut icon" href="./main_page_resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./main_page_resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./main_page_resources/normalize.css">
+    <link rel="stylesheet" href="./main_page_resources/fonts.css">
+    <link rel="stylesheet" href="./main_page_resources/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-H9XFCMDPNS");
+    </script>
+  <style title="4a77c6fb-1431-4fb0-ba0e-f8fd626bd07b"></style></head>
+  <body class="gpt-right-sidebar" data-new-gr-c-s-check-loaded="14.1181.0" data-gr-ext-installed="">
+    <div id="ext-sidebar">
+    <div class="close-chat lightMode-nav-close" style="--close2:url(chrome-extension://kdgdohgdbempjoicceeaaglaioadgfhe/../res/icons/ui/close2.png);--close:url(chrome-extension://kdgdohgdbempjoicceeaaglaioadgfhe/../res/icons/ui/close.png);"></div>
+    </div>
+  
+    <div style="padding-bottom: 50px">
+      <section style="background-color: var(--dark_accent_color)">
+        <div class="content-wrapper title-wrapper" style="flex-direction: column">
+          <div style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding-bottom: 15px;
+            ">
+            <h1 style="font-size: 60px; padding-top: 0.4em">AgentStudio</h1>
+            <!-- <img src="./main_page_resources/agent-studio-logo-text-light.png" style="height: 100px; padding-top: 0em; padding-left: 0.5em"> -->
+          </div>
+          <h2>Integrating benchmarks, environments, and toolkits for general computer agents</h2>
+          <!-- <h3 style="font-size: 20px; padding-top: 1.2em">NeurIPS 2024</h3> -->
+          <p style="text-align: center;margin-top:1em;">
+            Longtao Zheng</a><sup>1</sup>*, Zhiyuan Huang</a><sup>3</sup>*, Zhenghai Xue</a><sup>1</sup>, Xinrun Wang</a><sup>1</sup>, Bo An</a><sup>1,2</sup>, Shuicheng Yan</a><sup>2</sup>
+          </p>
+          <p style="text-align: center;margin-top:1em;">
+            <sup>1</sup>Nanyang Technological University, Singapore &nbsp; <sup>2</sup>Skywork AI, Singapore &nbsp; <sup>3</sup>ETH Zurich &nbsp; (*Equal contribution)
+          </p>
+          <div class="content-wrapper" style="margin-top: 2em">
+            <a href="https://drive.google.com/file/d/1gT6_ZNCk4EwclTP3bt-GiQDR3NwbZ8os/view?usp=sharing">
+              <button class="outline">
+                <i class="fa fa-paperclip"></i> Paper&nbsp;
+              </button>
+            </a>
+            <a href="https://github.com/SkyworkAI/agent-studio">
+              <button class="outline">
+                <i class="fab fa-github"></i> Code&nbsp;
+              </button>
+            </a>
+            <a href="./doc_index.html">
+              <button class="outline">
+                <i class="fa-solid fa-file"></i> Docs&nbsp;
+              </button>
+            </a>
+            <!-- <a href="https://huggingface.co/spaces/Skywork/agent-studio-leaderboard">
+              <button class="outline">
+                <i class="fa fa-upload"></i> Submit&nbsp;
+              </button>
+            </a> -->
+          </div>
+        </div>
+      </section>
+      <section class="main-container">
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">GroundUI Leaderboard</h2>
+            <div class="tabcontent tabcontentall" style="display: block">
+              <table class="table scrollable">
+                <thead>
+                  <tr>
+                    <th><div class="sticky-header-content">Model</div></th>
+                    <th><div class="sticky-header-content">Date</div></th>
+                    <th><div class="sticky-header-content">Web</div></th>
+                    <th><div class="sticky-header-content">Desktop</div></th>
+                    <th><div class="sticky-header-content">Mobile</div></th>
+                    <th><div class="sticky-header-content">Total</div></th>
+                    <!-- <th><div class="sticky-header-content">Logs</div></th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="model-type">SeeClick</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">64.3</p></td>
+                    <td><p class="number">44.3</p></td>
+                    <td><p class="number">73.7</p></td>
+                    <td><p class="number">61.1</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">CogAgent</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">25.3</p></td>
+                    <td><p class="number">15.7</p></td>
+                    <td><p class="number">35.7</p></td>
+                    <td><p class="number">25.5</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">GPT-4o (0513)</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">7.5</p></td>
+                    <td><p class="number">8.3</p></td>
+                    <td><p class="number">26.3</p></td>
+                    <td><p class="number">13.4</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">GPT-4 Turbo (0409)</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">5.3</p></td>
+                    <td><p class="number">11.0</p></td>
+                    <td><p class="number">23.0</p></td>
+                    <td><p class="number">12.3</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">Gemini-1.5 Flash</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">0.5</p></td>
+                    <td><p class="number">4.3</p></td>
+                    <td><p class="number">26.3</p></td>
+                    <td><p class="number">9.4</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">CogVLM2-Llama3-chat-19B</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">2.5</p></td>
+                    <td><p class="number">2.7</p></td>
+                    <td><p class="number">5.3</p></td>
+                    <td><p class="number">3.4</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">Gemini-1.0 Pro</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">0.5</p></td>
+                    <td><p class="number">0.3</p></td>
+                    <td><p class="number">5.0</p></td>
+                    <td><p class="number">1.8</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">MiniCPM-Llama3-V 2.5</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">0.0</p></td>
+                    <td><p class="number">0.3</p></td>
+                    <td><p class="number">2.7</p></td>
+                    <td><p class="number">0.9</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">Qwen-VL-Chat</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">0.0</p></td>
+                    <td><p class="number">0.0</p></td>
+                    <td><p class="number">0.0</p></td>
+                    <td><p class="number">0.0</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-content">
+              UI grounding with accurate coordinates is one of the main challenges for human-like computer agents, since not all interactable elements are not readily available. It has also been validated that current models can already generate correct high-level planning in text space, but struggle to ground them into accurate actions. However, there are few existing benchmark provide evaluation results on UI grounding capabilities across different applications and paltforms. In AgentStudio, we systematically re-organize existing datasets, plus self-collected data, into 18K diverse and realistic data with recaptioned clear instructions to benchmark UI grounding.
+              <br>
+              We collected screenshots from test set of existing datasets across web, desktop, and mobile devices, and additional screenshots collected with AgentStudio toolkits. We augment the instructions into detailed and clear ones with the help of GPT-4o. These data add up to 18K UI grounding dataset. For efficient benchmarking, we conduct experiments on a subset, <strong>GroundUI-1K</strong>, which contains 400, 300, and 300 samples for web, desktop, and mobile devices, respectively.
+            </p>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">Success Detection Leaderboard</h2>
+            <div class="tabcontent tabcontentall" style="display: block">
+              <table class="table scrollable">
+                <thead>
+                  <tr>
+                    <th><div class="sticky-header-content">Model</div></th>
+                    <th><div class="sticky-header-content">Date</div></th>
+                    <th><div class="sticky-header-content">Web</div></th>
+                    <th><div class="sticky-header-content">Desktop</div></th>
+                    <th><div class="sticky-header-content">Mobile</div></th>
+                    <th><div class="sticky-header-content">Total</div></th>
+                    <!-- <th><div class="sticky-header-content">Logs</div></th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="model-type">Gemini-1.0 Pro</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">63.0</p></td>
+                    <td><p class="number">90.0</p></td>
+                    <td><p class="number">60.0</p></td>
+                    <td><p class="number">63.7</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">Qwen-VL-Chat</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">58.0</p></td>
+                    <td><p class="number">90.0</p></td>
+                    <td><p class="number">64.0</p></td>
+                    <td><p class="number">61.9</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="model-type">GPT-4o</p>
+                    </td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">57.0</p></td>
+                    <td><p class="number">85.0</p></td>
+                    <td><p class="number">32.0</p></td>
+                    <td><p class="number">50.9</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-content">
+              The ability to self-evaluate and learn from environment interactions is one of the core abilities of agents. However, there are currently few benchmarks that focus on and measure the ability of computer agents to judge whether a trajectory is successful.
+              <br>
+              We collect trajectories from both existing environments such as AITW, Mind2Web, VisualWebArena, etc. and AgentStudio's real-world environments, resulting in diverse trajectories of both human and agents on web, desktop, and mobile environments. Since most human trajectories are successful, we balance the dataset by labeling partial trajectories as failure cases.
+            </p>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">Inverse Action Labeling Leaderboard</h2>
+            <div class="tabcontent tabcontentall" style="display: block">
+              <h3 class="text-subtitle">Neighboring Frames to Single Action</h3>
+              <br>
+              <table class="table scrollable">
+                <thead>
+                  <tr>
+                    <th><div class="sticky-header-content">Model</div></th>
+                    <th><div class="sticky-header-content">Date</div></th>
+                    <th><div class="sticky-header-content">Mind2Web</div></th>
+                    <th><div class="sticky-header-content">AITW</div></th>
+                    <th><div class="sticky-header-content">VWA</div></th>
+                    <th><div class="sticky-header-content">Total</div></th>
+                    <!-- <th><div class="sticky-header-content">Logs</div></th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p class="model-type">GPT-4o</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">57.0</p></td>
+                    <td><p class="number">13.0</p></td>
+                    <td><p class="number">24.0</p></td>
+                    <td><p class="number">31.3</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td><p class="model-type">Claude-3 Haiku</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">31.0</p></td>
+                    <td><p class="number">24.0</p></td>
+                    <td><p class="number">29.0</p></td>
+                    <td><p class="number">28.0</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td><p class="model-type">Gemini-1.0 Pro</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">47.0</p></td>
+                    <td><p class="number">20.0</p></td>
+                    <td><p class="number">17.0</p></td>
+                    <td><p class="number">28.0</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td><p class="model-type">Qwen-VL-Chat</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">21.0</p></td>
+                    <td><p class="number">13.0</p></td>
+                    <td><p class="number">18.0</p></td>
+                    <td><p class="number">17.3</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br/>
+            <div class="tabcontent tabcontentall" style="display: block">
+              <h3 class="text-subtitle">Video to Multiple Actions</h3>
+              <br>
+              <table class="table scrollable">
+                <thead>
+                  <tr>
+                    <th><div class="sticky-header-content">Model</div></th>
+                    <th><div class="sticky-header-content">Date</div></th>
+                    <th><div class="sticky-header-content">Mind2Web</div></th>
+                    <th><div class="sticky-header-content">AITW</div></th>
+                    <th><div class="sticky-header-content">VWA</div></th>
+                    <th><div class="sticky-header-content">Total</div></th>
+                    <!-- <th><div class="sticky-header-content">Logs</div></th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p class="model-type">GPT-4o</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">49.1</p></td>
+                    <td><p class="number">46.0</p></td>
+                    <td><p class="number">35.3</p></td>
+                    <td><p class="number">43.5</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  <tr>
+                    <td><p class="model-type">Claude-3 Haiku</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">17.7</p></td>
+                    <td><p class="number">26.8</p></td>
+                    <td><p class="number">17.7</p></td>
+                    <td><p class="number">27.9</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  <tr>
+                    <td><p class="model-type">Gemini-1.0 Pro</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">35.6</p></td>
+                    <td><p class="number">24.1</p></td>
+                    <td><p class="number">24.0</p></td>
+                    <td><p class="number">20.7</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                  </tr>
+                  <tr>
+                    <td><p class="model-type">Qwen-VL-Chat</p></td>
+                    <td><span class="label-date">2024-06-06</span></p></td>
+                    <td><p class="number">3.1</p></td>
+                    <td><p class="number">15.2</p></td>
+                    <td><p class="number">13.3</p></td>
+                    <td><p class="number">10.6</p></td>
+                    <!-- <td><p style="text-align: center;">
+                      <a href="">🔗</a>
+                    </p></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-content">
+              Unlocking the ability to learn from videos is a key capability for next-generation computer agents to achieve generalization and lifelong learning. Therefore, we present the first dataset designed to measure the ability to learn how to act from videos. Specifically, we evaluate current multimodal models as inverse dynamics models, predicting actions from unlabeled videos in two separate settings. In the first scenario, we provide the model with two neighboring screenshots, one before and one after an action, and ask it to predict the action that occurred in between. In the second, which is a more general scenario, we provide the model with states for multiple actions (which can be viewed as video frames) and ask it to predict all the actions within the frames.
+            </p>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">Resources</h2>
+            <p class="text-content" style="margin-top:1em;">
+              AgentStudio benchmark suites are available at both HuggingFace and Google Drive. The jsonl files of GroundUI-1K and Trajectory-Lite can also be found in our GitHub repository. We are more than happy to receive feedback and suggestions from the community. Please feel free to raise a GitHub Issue or <a href="mailto:longtao001@e.ntu.edu.sg">reach out to us</a> if you have any questions or comments, or want to submit new benchmark results.
+            </p>
+            <div class="content-wrapper" style="width: 100%">
+              <div class="content-box column">
+                <a style="width: 100%" href="https://huggingface.co/datasets/agent-studio/GroundUI-1K">
+                  <div class="download">🤗 GroundUI-1K</div>
+                </a>
+              </div>
+              <div class="content-box column">
+                <a style="width: 100%" href="https://huggingface.co/datasets/agent-studio/GroundUI-18K">
+                  <div class="download">🤗 GroundUI-18K</div>
+                </a>
+              </div>
+              <div class="content-box column">
+                <a style="width: 100%" href="https://drive.google.com/drive/folders/1XKDXwdWODCB2e80gflAgZiiBICqbgdeB?usp=sharing">
+                  <div class="download">Google Drive</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">AgentStudio Environments</h2>
+            <p class="text-content">
+              AgentStudio environments supports <strong>online interactions</strong> the most <strong>generic observation and action spaces</strong>, including human-computer interfaces and code execution. The implementation is also compatible with <strong>diverse operating systems and devices</strong>. These features drastically expand the potential task space and allow building and benchmarking agents in <strong>real-world</strong> settings.
+            </p>
+            <img src="./main_page_resources/overview.png" style="width:80%;margin:auto;display:block;">
+            <br>
+            <img src="./main_page_resources/agent_space.jpg" style="width:80%;margin:auto;display:block;">
+            <br>
+            <img src="./main_page_resources/comparison.png" style="width:80%;margin:auto;display:block;">
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">AgentStudio Toolkits</h2>
+            <img src="./main_page_resources/annotation_example.jpg" style="width:80%;margin:auto;display:block;">
+            <p class="text-content">
+              This figure demonstrates the process of recording complete keyboard-mouse action sequences required to open the preferences menu. The procedure involves the following steps: i) importing requisite tools, ii) obtaining the screen coordinates for mouse operations, and iii) executing actions. When collecting the UI grounding dataset, users are additionally required to delineate the UI elements within a bounding box provided in the interface.
+            <br>
+            <br>
+              You can also evaluate agents on your own tasks with the help of our toolkits. The figure below shows the process of monitoring agent behaviors on custom task configurations using AgentStudio toolkits. Read more in our <a href="https://skyworkai.github.io/agent-studio/doc_index.html" ,="" target="_blank">documentation</a> for environments and toolkits!
+            </p>
+            <img src="./main_page_resources/recorder_record.jpg" style="width:80%;margin:auto;display:block;">
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-box">
+            <h2 class="text-title">Citation</h2>
+              If you find the data or code useful, please consider cite us: <br><br><pre id="citation"><code>@article{zheng2024agentstudio,
+  title={AgentStudio: A Toolkit for Building General Virtual Agents},
+  author={Longtao Zheng and Zhiyuan Huang and Zhenghai Xue and Xinrun Wang and Bo An and Shuicheng Yan},
+  journal={arXiv preprint arXiv:2403.17918},
+  year={2024}
+}</code></pre>
+          <!-- <br>
+              <b>Disclaimer:</b> AgentStudio is for research purposes only. Models
+              trained and evaluated on Agent Studio can produce unexpected results.
+              We are not responsible for any damages caused by the use of
+              Agent Studio, including but not limited to, any loss of profit, data,
+              or use of data.
+            <p></p> -->
+          </div>
+        </section></div>
+      
+    
+    <footer class="footer-container">
+      <div class="content-wrapper">
+        <div class="footer-text">
+        </div>
+      </div>
+    </footer>
+  
+    <div class="appended-element chat-weight" style="--gpt-widget-icon:url(chrome-extension://kdgdohgdbempjoicceeaaglaioadgfhe/../res/icons/ui/left.png);--gpt-white-widget-icon:url(chrome-extension://kdgdohgdbempjoicceeaaglaioadgfhe/../res/icons/ui/white_left.png);">
+      <div id="chat-gpt-widget" class="chat-gpt-widget" style="--chatgpt-widget-display: flex;">
+        <div class="main-icon widget-icon"></div>
+      </div>
+   
+        
+    <div>
+  </div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,729 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agent_studio.envs.desktop_env.evaluators.telegram_evaluator &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/agent_studio/envs/desktop_env/evaluators/telegram_evaluator';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../autoapi/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../autoapi/agent_studio/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../autoapi/agent_studio/agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../autoapi/agent_studio/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../autoapi/agent_studio/envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/envs/desktop_env/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../autoapi/agent_studio/utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for agent_studio.envs.desktop_env.evaluators.telegram_evaluator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+
+<span class="kn">from</span> <span class="nn">pyrogram.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">pyrogram.errors</span> <span class="kn">import</span> <span class="n">FloodWait</span>
+<span class="kn">from</span> <span class="nn">pyrogram.types</span> <span class="kn">import</span> <span class="n">Message</span>
+
+<span class="kn">from</span> <span class="nn">agent_studio.config</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.evaluators.evaluator</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Evaluator</span><span class="p">,</span>
+    <span class="n">FeedbackException</span><span class="p">,</span>
+    <span class="n">evaluation_handler</span><span class="p">,</span>
+    <span class="n">reset_handler</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.utils.human_utils</span> <span class="kn">import</span> <span class="n">confirm_action</span>
+
+<div class="viewcode-block" id="logger"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.logger">[docs]</a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="config"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.config">[docs]</a><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="TelegramService"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramService">[docs]</a><span class="k">class</span> <span class="nc">TelegramService</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__app_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">telegram_api_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__app_hash</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">telegram_api_hash</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__service</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
+            <span class="s2">&quot;agent_studio_account&quot;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__app_id</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__app_hash</span><span class="p">,</span>
+            <span class="n">workdir</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">telegram_workdir</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="s2">&quot;telegram_workdir&quot;</span><span class="p">)</span>
+            <span class="k">else</span> <span class="s2">&quot;agent_studio/config&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__get_message_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;text&quot;</span>
+        <span class="k">elif</span> <span class="n">message</span><span class="o">.</span><span class="n">photo</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;photo&quot;</span>
+        <span class="k">elif</span> <span class="n">message</span><span class="o">.</span><span class="n">document</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;document&quot;</span>
+        <span class="k">elif</span> <span class="n">message</span><span class="o">.</span><span class="n">video</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;video&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;unknown&quot;</span>
+
+<div class="viewcode-block" id="TelegramService.message_match"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramService.message_match">[docs]</a>    <span class="k">def</span> <span class="nf">message_match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chat_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ref_messages</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">_match_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ref_messages</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">compare_method</span> <span class="o">=</span> <span class="n">ref_messages</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compare_method&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">compare_method</span> <span class="o">==</span> <span class="s2">&quot;exact&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">text</span> <span class="o">==</span> <span class="n">ref_messages</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">def</span> <span class="nf">_match_one_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">ref_message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">message_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;replyto&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span>
+                <span class="n">message</span><span class="o">.</span><span class="n">reply_to_message_id</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The error occured when checking the message with </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2">. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Replyto message does not match.&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Expect </span><span class="si">{</span><span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;replyto&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;but get </span><span class="si">{</span><span class="n">message</span><span class="o">.</span><span class="n">reply_to_message_id</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;replyto&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">replyto_ref</span> <span class="o">=</span> <span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;replyto&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">replyto_ref</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">message</span><span class="o">.</span><span class="n">reply_to_message_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Can&#39;t find the replyto message &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;for the message with </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2"> &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Find message: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Reference message: </span><span class="si">{</span><span class="n">ref_message</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+                <span class="n">replyto_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">get_chat_history</span><span class="p">(</span>
+                    <span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="n">offset_id</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">reply_to_message_id</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">replyto_message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">replyto_message</span><span class="p">)</span>
+                <span class="n">_match_one_message</span><span class="p">(</span>
+                    <span class="n">replyto_message</span><span class="p">,</span>
+                    <span class="n">replyto_ref</span><span class="p">,</span>
+                    <span class="c1"># recersively verify all replyto messages</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__get_message_type</span><span class="p">(</span><span class="n">replyto_message</span><span class="p">),</span>
+                <span class="p">)</span>
+            <span class="k">match</span> <span class="n">message_type</span><span class="p">:</span>
+                <span class="k">case</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">_match_text</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ref_message</span><span class="p">):</span>
+                        <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The error occured &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;when checking the message with </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2">. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Text message does not match.&quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Expect </span><span class="si">{</span><span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">, but get </span><span class="si">{</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="p">)</span>
+                <span class="k">case</span> <span class="s2">&quot;document&quot;</span><span class="p">:</span>
+                    <span class="n">downloaded_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">download_media</span><span class="p">(</span>
+                        <span class="n">message</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">file_id</span><span class="p">,</span>
+                        <span class="n">file_name</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span>
+                        <span class="n">in_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">downloaded_file</span><span class="p">,</span> <span class="n">BytesIO</span><span class="p">):</span>
+                        <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">message</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">file_name</span><span class="si">}</span><span class="s2"> not found. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Failed to download&quot;</span>
+                        <span class="p">)</span>
+
+                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;file_path&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                        <span class="n">file_ref</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+                    <span class="k">if</span> <span class="n">downloaded_file</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span> <span class="o">!=</span> <span class="n">file_ref</span><span class="o">.</span><span class="n">getvalue</span><span class="p">():</span>
+                        <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The error occured when &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;checking the message with </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2">. &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;Document file does not match.&quot;</span>
+                        <span class="p">)</span>
+                <span class="c1"># Extend here for other types like &#39;photo&#39;, &#39;video&#39;, etc.</span>
+                <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The error occured when checking the message with </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2">. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Message type </span><span class="si">{</span><span class="n">message_type</span><span class="si">}</span><span class="s2"> not supported.&quot;</span>
+                    <span class="p">)</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="p">:</span>
+            <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">get_chat_history</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">ref_messages</span><span class="p">))</span>
+            <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span><span class="n">message</span> <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">]</span>
+
+            <span class="c1"># messages returned from the API are in reverse chronological order</span>
+            <span class="c1"># so we need to reverse the reference messages</span>
+            <span class="k">for</span> <span class="n">message</span><span class="p">,</span> <span class="n">ref_message</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">((</span><span class="n">messages</span><span class="p">),</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">ref_messages</span><span class="p">)):</span>
+                <span class="n">message_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_message_type</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">message_type</span> <span class="o">!=</span> <span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The error occured when checking the message with </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2">. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Message type does not match&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Expect </span><span class="si">{</span><span class="n">ref_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">, but get </span><span class="si">{</span><span class="n">message_type</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+
+                <span class="n">_match_one_message</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">ref_message</span><span class="p">,</span> <span class="n">message_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TelegramService.delete_recent_messages"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramService.delete_recent_messages">[docs]</a>    <span class="k">def</span> <span class="nf">delete_recent_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nd">@confirm_action</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Are you sure you want to delete </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> recent messages from </span><span class="si">{</span><span class="n">chat_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="k">def</span> <span class="nf">_delete_recent_messages</span><span class="p">(</span><span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="p">:</span>
+                <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">get_chat_history</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+                <span class="n">message_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">]</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">delete_messages</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">message_ids</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="kc">True</span>
+                <span class="k">except</span> <span class="n">FloodWait</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Rate limit exceeded. Sleeping for 1 seconds.&quot;</span><span class="p">)</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="c1"># Handle other possible exceptions</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;An error occurred: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">_delete_recent_messages</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_last_message_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Must be called within a context manager (with self.__service).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">get_chat_history</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span><span class="o">.</span><span class="n">id</span>
+
+<div class="viewcode-block" id="TelegramService.send_messages"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramService.send_messages">[docs]</a>    <span class="k">def</span> <span class="nf">send_messages</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">messages</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">replyto_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">replyto_offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">replyto_message_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_last_message_id</span><span class="p">(</span><span class="n">chat_id</span><span class="p">)</span> <span class="o">-</span> <span class="n">replyto_offset</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">replyto_message_id</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                    <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+                    <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+                    <span class="n">reply_to_message_id</span><span class="o">=</span><span class="n">replyto_message_id</span><span class="p">,</span>
+                <span class="p">)</span></div>
+
+<div class="viewcode-block" id="TelegramService.send_document"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramService.send_document">[docs]</a>    <span class="k">def</span> <span class="nf">send_document</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">caption</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">replyto_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">replyto_offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">replyto_message_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_last_message_id</span><span class="p">(</span><span class="n">chat_id</span><span class="p">)</span> <span class="o">-</span> <span class="n">replyto_offset</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">replyto_message_id</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__service</span><span class="o">.</span><span class="n">send_document</span><span class="p">(</span>
+                <span class="n">chat_id</span><span class="p">,</span>
+                <span class="n">file_path</span><span class="p">,</span>
+                <span class="n">caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
+                <span class="n">force_document</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">reply_to_message_id</span><span class="o">=</span><span class="n">replyto_message_id</span><span class="p">,</span>
+            <span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TelegramEvaluator"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramEvaluator">[docs]</a><span class="k">class</span> <span class="nc">TelegramEvaluator</span><span class="p">(</span><span class="n">Evaluator</span><span class="p">):</span>
+<div class="viewcode-block" id="TelegramEvaluator.name"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramEvaluator.name">[docs]</a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;telegram&quot;</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">eval_procedure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+        <span class="n">reset_procedure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">eval_procedure</span><span class="o">=</span><span class="n">eval_procedure</span><span class="p">,</span>
+            <span class="n">reset_procedure</span><span class="o">=</span><span class="n">reset_procedure</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span> <span class="o">=</span> <span class="n">TelegramService</span><span class="p">()</span>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;message_match&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="TelegramEvaluator.message_match"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramEvaluator.message_match">[docs]</a>    <span class="k">def</span> <span class="nf">message_match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">ref_messages</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if the messages in the chat match the reference messages.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            chat_id (str | int): Chat id.</span>
+<span class="sd">            ref_messages (list[dict]): List of reference messages.</span>
+<span class="sd">                Each reference message is a dictionary with the following keys:</span>
+
+<span class="sd">                - type (str): Type of the message. \</span>
+<span class="sd">                    valid values are &#39;text&#39;, &#39;document&#39;.</span>
+<span class="sd">                - compare_method (str): Method to compare the message. \</span>
+<span class="sd">                    Supported methods is &#39;exact&#39;.</span>
+<span class="sd">                - value (str): Value to compare with the message. \</span>
+<span class="sd">                    Only used when compare_method is &#39;exact&#39;.</span>
+<span class="sd">                - file_path (str, optional): Path to the file. \</span>
+<span class="sd">                    Only used when type is &#39;document&#39;.</span>
+<span class="sd">                - caption (str, optional): Caption of the file. \</span>
+<span class="sd">                    Only used when type is &#39;document&#39;.</span>
+<span class="sd">                - replyto (dict, optional): Reference message to reply to. \</span>
+<span class="sd">                    Required keys are the same as the ref_messages \</span>
+<span class="sd">                    (for recursive matching).</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            FeedbackException: If the messages do not match.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+
+<span class="sd">        Example::</span>
+
+<span class="sd">            ref_messages = [</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;type&quot;: &quot;text&quot;,</span>
+<span class="sd">                    &quot;compare_method&quot;: &quot;exact&quot;,</span>
+<span class="sd">                    &quot;value&quot;: &quot;Welcome to the agent_studio!&quot;,</span>
+<span class="sd">                },</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;type&quot;: &quot;document&quot;,</span>
+<span class="sd">                    &quot;file_path&quot;: &quot;data/test/telegram/GitHub-logo.png&quot;,</span>
+<span class="sd">                    &quot;caption&quot;: &quot;GitHub logo.&quot;,</span>
+<span class="sd">                    &quot;replyto&quot;: {</span>
+<span class="sd">                        &quot;type&quot;: &quot;text&quot;,</span>
+<span class="sd">                        &quot;compare_method&quot;: &quot;exact&quot;,</span>
+<span class="sd">                        &quot;value&quot;: &quot;hi&quot;,</span>
+<span class="sd">                    }</span>
+<span class="sd">                }</span>
+<span class="sd">            ]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">message_match</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">ref_messages</span><span class="p">)</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;send_messages&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="TelegramEvaluator.send_messages"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramEvaluator.send_messages">[docs]</a>    <span class="k">def</span> <span class="nf">send_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">messages</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Send a message to specific chat.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            chat_id (str | int): Chat id.</span>
+<span class="sd">            messages (list[str]): List of messages to be sent.</span>
+<span class="sd">                messages are in the order of sending.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">send_messages</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">messages</span><span class="p">)</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;delete_recent_messages&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="TelegramEvaluator.delete_recent_messages"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramEvaluator.delete_recent_messages">[docs]</a>    <span class="k">def</span> <span class="nf">delete_recent_messages</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete recent messages from specific chat.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            chat_id (str | int): Chat id.</span>
+<span class="sd">            n (int): Number of messages to be deleted.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">delete_recent_messages</span><span class="p">(</span>
+            <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;send_document&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="TelegramEvaluator.send_document"><a class="viewcode-back" href="../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/telegram_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.telegram_evaluator.TelegramEvaluator.send_document">[docs]</a>    <span class="k">def</span> <span class="nf">send_document</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">chat_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">caption</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">replyto_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Send a document to specific chat.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            chat_id (str | int): Chat id.</span>
+<span class="sd">            file_path (str): Path to the document.</span>
+<span class="sd">            caption (str, optional): Caption of the document. Defaults to &quot;&quot;.</span>
+<span class="sd">            replyto_offset (int, optional): Offset of the message to reply to. \</span>
+<span class="sd">                Defaults to None. The offset is counted from the last message. \</span>
+<span class="sd">                E.g. 0 means reply to the last message, \</span>
+<span class="sd">                1 means reply to the second last message, etc.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">send_document</span><span class="p">(</span>
+            <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span>
+            <span class="n">caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
+            <span class="n">replyto_offset</span><span class="o">=</span><span class="n">replyto_offset</span><span class="p">,</span>
+        <span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

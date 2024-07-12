@@ -1,0 +1,689 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../../_static/doctools.js"></script>
+    <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector';</script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../../autoapi/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/envs/desktop_env/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.adapters</span> <span class="kn">import</span> <span class="n">HTTPAdapter</span><span class="p">,</span> <span class="n">Retry</span>
+
+
+<div class="viewcode-block" id="FilterType"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType">[docs]</a><span class="k">class</span> <span class="nc">FilterType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Filter type for marketplace search</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FilterType.Tag"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.Tag">[docs]</a>    <span class="n">Tag</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="FilterType.ExtensionId"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.ExtensionId">[docs]</a>    <span class="n">ExtensionId</span> <span class="o">=</span> <span class="mi">4</span></div>
+<div class="viewcode-block" id="FilterType.Category"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.Category">[docs]</a>    <span class="n">Category</span> <span class="o">=</span> <span class="mi">5</span></div>
+<div class="viewcode-block" id="FilterType.ExtensionName"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.ExtensionName">[docs]</a>    <span class="n">ExtensionName</span> <span class="o">=</span> <span class="mi">7</span></div>
+<div class="viewcode-block" id="FilterType.Target"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.Target">[docs]</a>    <span class="n">Target</span> <span class="o">=</span> <span class="mi">8</span></div>
+<div class="viewcode-block" id="FilterType.Featured"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.Featured">[docs]</a>    <span class="n">Featured</span> <span class="o">=</span> <span class="mi">9</span></div>
+<div class="viewcode-block" id="FilterType.SearchText"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.SearchText">[docs]</a>    <span class="n">SearchText</span> <span class="o">=</span> <span class="mi">10</span></div>
+<div class="viewcode-block" id="FilterType.ExcludeWithFlags"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.FilterType.ExcludeWithFlags">[docs]</a>    <span class="n">ExcludeWithFlags</span> <span class="o">=</span> <span class="mi">12</span></div></div>
+
+
+<div class="viewcode-block" id="SortBy"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy">[docs]</a><span class="k">class</span> <span class="nc">SortBy</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Result sorting options for marketplace search</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SortBy.NoneOrRelevance"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.NoneOrRelevance">[docs]</a>    <span class="n">NoneOrRelevance</span> <span class="o">=</span> <span class="mi">0</span></div>
+<div class="viewcode-block" id="SortBy.LastUpdatedDate"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.LastUpdatedDate">[docs]</a>    <span class="n">LastUpdatedDate</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="SortBy.Title"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.Title">[docs]</a>    <span class="n">Title</span> <span class="o">=</span> <span class="mi">2</span></div>
+<div class="viewcode-block" id="SortBy.PublisherName"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.PublisherName">[docs]</a>    <span class="n">PublisherName</span> <span class="o">=</span> <span class="mi">3</span></div>
+<div class="viewcode-block" id="SortBy.InstallCount"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.InstallCount">[docs]</a>    <span class="n">InstallCount</span> <span class="o">=</span> <span class="mi">4</span></div>
+<div class="viewcode-block" id="SortBy.PublishedDate"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.PublishedDate">[docs]</a>    <span class="n">PublishedDate</span> <span class="o">=</span> <span class="mi">10</span></div>
+<div class="viewcode-block" id="SortBy.AverageRating"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.AverageRating">[docs]</a>    <span class="n">AverageRating</span> <span class="o">=</span> <span class="mi">6</span></div>
+<div class="viewcode-block" id="SortBy.WeightedRating"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortBy.WeightedRating">[docs]</a>    <span class="n">WeightedRating</span> <span class="o">=</span> <span class="mi">12</span></div></div>
+
+
+<div class="viewcode-block" id="SortOrder"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortOrder">[docs]</a><span class="k">class</span> <span class="nc">SortOrder</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sort order for marketplace search</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SortOrder.Default"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortOrder.Default">[docs]</a>    <span class="n">Default</span> <span class="o">=</span> <span class="mi">0</span></div>
+<div class="viewcode-block" id="SortOrder.Ascending"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortOrder.Ascending">[docs]</a>    <span class="n">Ascending</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="SortOrder.Descending"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.SortOrder.Descending">[docs]</a>    <span class="n">Descending</span> <span class="o">=</span> <span class="mi">2</span></div></div>
+
+
+<span class="c1"># TODO: maybe merge this to desktop_env/eval/vscode_evaluator/vscode_evaluator.py</span>
+<div class="viewcode-block" id="VSCodeConnector"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector">[docs]</a><span class="k">class</span> <span class="nc">VSCodeConnector</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">workspace_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">executable_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">executable_path</span> <span class="o">=</span> <span class="n">executable_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">workspace_path</span> <span class="o">=</span> <span class="n">workspace_path</span>
+        <span class="n">retry_strategy</span> <span class="o">=</span> <span class="n">Retry</span><span class="p">(</span>
+            <span class="n">total</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">backoff_factor</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">status_forcelist</span><span class="o">=</span><span class="p">[</span><span class="mi">429</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">502</span><span class="p">,</span> <span class="mi">503</span><span class="p">,</span> <span class="mi">504</span><span class="p">],</span>
+            <span class="n">allowed_methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;OPTIONS&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="n">adapter</span> <span class="o">=</span> <span class="n">HTTPAdapter</span><span class="p">(</span><span class="n">max_retries</span><span class="o">=</span><span class="n">retry_strategy</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+
+<div class="viewcode-block" id="VSCodeConnector.marketplace_search"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.marketplace_search">[docs]</a>    <span class="k">def</span> <span class="nf">marketplace_search</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">query</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+        <span class="n">sort_by</span><span class="p">:</span> <span class="n">SortBy</span><span class="p">,</span>
+        <span class="n">sort_order</span><span class="p">:</span> <span class="n">SortOrder</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Search for extensions in the marketplace</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            query (list[dict]): List of query filters</span>
+<span class="sd">            sort_by (SortBy): Sort by option</span>
+<span class="sd">            sort_order (SortOrder): Sort order option</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: List of extensions</span>
+
+<span class="sd">        Example::</span>
+
+<span class="sd">            query = [</span>
+<span class="sd">                        {</span>
+<span class="sd">                            &quot;filterType&quot;: FilterType.ExtensionName.value,</span>
+<span class="sd">                            &quot;value&quot;: &quot;DavidAnson.vscode-markdownlint&quot;</span>
+<span class="sd">                        },</span>
+<span class="sd">                    ]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">extension_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_vscode_extensions</span><span class="p">(</span>
+            <span class="n">session</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span>
+            <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+            <span class="n">sort_by</span><span class="o">=</span><span class="n">sort_by</span><span class="p">,</span>
+            <span class="n">sort_order</span><span class="o">=</span><span class="n">sort_order</span><span class="p">,</span>
+        <span class="p">):</span>
+            <span class="n">extension_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">extension_list</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.marketplace_search_by_extension_id"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.marketplace_search_by_extension_id">[docs]</a>    <span class="k">def</span> <span class="nf">marketplace_search_by_extension_id</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">extension_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Search by extension name</span>
+<span class="sd">        Default sort by install count descending</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">marketplace_search</span><span class="p">(</span>
+            <span class="n">query</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">{</span><span class="s2">&quot;filterType&quot;</span><span class="p">:</span> <span class="n">FilterType</span><span class="o">.</span><span class="n">ExtensionName</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">extension_name</span><span class="p">},</span>
+            <span class="p">],</span>
+            <span class="n">sort_by</span><span class="o">=</span><span class="n">SortBy</span><span class="o">.</span><span class="n">InstallCount</span><span class="p">,</span>
+            <span class="n">sort_order</span><span class="o">=</span><span class="n">SortOrder</span><span class="o">.</span><span class="n">Descending</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.marketplace_search_by_keyword"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.marketplace_search_by_keyword">[docs]</a>    <span class="k">def</span> <span class="nf">marketplace_search_by_keyword</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">keyword</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Search by keyword</span>
+<span class="sd">        Default sort by install count descending</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">marketplace_search</span><span class="p">(</span>
+            <span class="n">query</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">{</span><span class="s2">&quot;filterType&quot;</span><span class="p">:</span> <span class="n">FilterType</span><span class="o">.</span><span class="n">SearchText</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">keyword</span><span class="p">},</span>
+            <span class="p">],</span>
+            <span class="n">sort_by</span><span class="o">=</span><span class="n">SortBy</span><span class="o">.</span><span class="n">InstallCount</span><span class="p">,</span>
+            <span class="n">sort_order</span><span class="o">=</span><span class="n">SortOrder</span><span class="o">.</span><span class="n">Descending</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.update_settings"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.update_settings">[docs]</a>    <span class="k">def</span> <span class="nf">update_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">workspace_path</span><span class="p">,</span> <span class="s2">&quot;.vscode&quot;</span><span class="p">,</span> <span class="s2">&quot;settings.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.compare_settings"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.compare_settings">[docs]</a>    <span class="k">def</span> <span class="nf">compare_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">workspace_path</span><span class="p">,</span> <span class="s2">&quot;.vscode&quot;</span><span class="p">,</span> <span class="s2">&quot;settings.json&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">current_settings</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">current_settings</span> <span class="o">==</span> <span class="n">settings</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.reset_settings"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.reset_settings">[docs]</a>    <span class="k">def</span> <span class="nf">reset_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">workspace_path</span><span class="p">,</span> <span class="s2">&quot;.vscode&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.list_extensions"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.list_extensions">[docs]</a>    <span class="k">def</span> <span class="nf">list_extensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="c1"># if extension_list is not None:</span>
+        <span class="c1">#     if versions:</span>
+        <span class="c1">#         return [extension.split(&quot;@&quot;)[0] for extension in extension_list]</span>
+        <span class="c1">#     else:</span>
+        <span class="c1">#         return extension_list</span>
+        <span class="c1"># else:</span>
+        <span class="n">extension_list</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">executable_path</span><span class="si">}</span><span class="s2"> --list-extensions --show-versions&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">extension_list</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]:</span>  <span class="c1"># no extensions installed</span>
+            <span class="k">return</span> <span class="p">{}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="n">extension</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">extension</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="n">extension_list</span>
+            <span class="p">}</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.uninstall_all_extensions"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.uninstall_all_extensions">[docs]</a>    <span class="k">def</span> <span class="nf">uninstall_all_extensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_extensions</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">uninstall_extension</span><span class="p">(</span><span class="n">extension</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.install_extension"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.install_extension">[docs]</a>    <span class="k">def</span> <span class="nf">install_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">executable_path</span><span class="si">}</span><span class="s2"> --install-extension </span><span class="si">{</span><span class="n">extension_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">extension_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_extensions</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.uninstall_extension"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.uninstall_extension">[docs]</a>    <span class="k">def</span> <span class="nf">uninstall_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;@&quot;</span> <span class="ow">in</span> <span class="n">extension_name</span><span class="p">:</span>
+            <span class="n">extension_name</span> <span class="o">=</span> <span class="n">extension_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">extension_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_extensions</span><span class="p">():</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">executable_path</span><span class="si">}</span><span class="s2"> --uninstall-extension </span><span class="si">{</span><span class="n">extension_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">extension_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_extensions</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="VSCodeConnector.extension_installed"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.extension_installed">[docs]</a>    <span class="k">def</span> <span class="nf">extension_installed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">extension_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_extensions</span><span class="p">()</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="VSCodeConnector.get_vscode_extensions"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/vscode/vscode_connector/index.html#agent_studio.envs.desktop_env.evaluators.vscode.vscode_connector.VSCodeConnector.get_vscode_extensions">[docs]</a>    <span class="k">def</span> <span class="nf">get_vscode_extensions</span><span class="p">(</span>
+        <span class="n">session</span><span class="p">:</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">,</span>
+        <span class="n">query</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+        <span class="n">max_page</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">page_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="n">sort_by</span><span class="p">:</span> <span class="n">SortBy</span> <span class="o">=</span> <span class="n">SortBy</span><span class="o">.</span><span class="n">InstallCount</span><span class="p">,</span>
+        <span class="n">sort_order</span><span class="p">:</span> <span class="n">SortOrder</span> <span class="o">=</span> <span class="n">SortOrder</span><span class="o">.</span><span class="n">Descending</span><span class="p">,</span>
+        <span class="n">include_versions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_files</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_category_and_tags</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_shared_accounts</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_version_properties</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">exclude_non_validated</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_installation_targets</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_asset_uri</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_statistics</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_latest_version_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">unpublished</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">include_name_conflict_info</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">api_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;7.2-preview.1&quot;</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        https://gist.github.com/jossef/8d7681ac0c7fd28e93147aa5044bc129</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;application/json; charset=utf-8; api-version=</span><span class="si">{</span><span class="n">api_version</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+
+        <span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">include_versions</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x1</span>
+
+        <span class="k">if</span> <span class="n">include_files</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x2</span>
+
+        <span class="k">if</span> <span class="n">include_category_and_tags</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x4</span>
+
+        <span class="k">if</span> <span class="n">include_shared_accounts</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x8</span>
+
+        <span class="k">if</span> <span class="n">include_version_properties</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x10</span>
+
+        <span class="k">if</span> <span class="n">exclude_non_validated</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x20</span>
+
+        <span class="k">if</span> <span class="n">include_installation_targets</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x40</span>
+
+        <span class="k">if</span> <span class="n">include_asset_uri</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x80</span>
+
+        <span class="k">if</span> <span class="n">include_statistics</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x100</span>
+
+        <span class="k">if</span> <span class="n">include_latest_version_only</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x200</span>
+
+        <span class="k">if</span> <span class="n">unpublished</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x1000</span>
+
+        <span class="k">if</span> <span class="n">include_name_conflict_info</span><span class="p">:</span>
+            <span class="n">flags</span> <span class="o">|=</span> <span class="mh">0x8000</span>
+
+        <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_page</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;criteria&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;filterType&quot;</span><span class="p">:</span> <span class="n">FilterType</span><span class="o">.</span><span class="n">Target</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.VisualStudio.Code&quot;</span><span class="p">,</span>
+                            <span class="p">},</span>
+                            <span class="o">*</span><span class="n">query</span><span class="p">,</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;pageNumber&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+                        <span class="s2">&quot;pageSize&quot;</span><span class="p">:</span> <span class="n">page_size</span><span class="p">,</span>
+                        <span class="s2">&quot;sortBy&quot;</span><span class="p">:</span> <span class="n">sort_by</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                        <span class="s2">&quot;sortOrder&quot;</span><span class="p">:</span> <span class="n">sort_order</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;assetTypes&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                <span class="s2">&quot;flags&quot;</span><span class="p">:</span> <span class="n">flags</span><span class="p">,</span>
+            <span class="p">}</span>
+
+            <span class="n">r</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="s2">&quot;https://marketplace.visualstudio.com/&quot;</span>
+                    <span class="s2">&quot;_apis/public/gallery/extensionquery&quot;</span>
+                <span class="p">),</span>
+                <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+            <span class="n">extensions</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;extensions&quot;</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="n">extensions</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">extension</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">extensions</span><span class="p">)</span> <span class="o">!=</span> <span class="n">page_size</span><span class="p">:</span>
+                <span class="k">break</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

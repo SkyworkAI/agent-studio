@@ -1,0 +1,1033 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>agent_studio.envs.desktop_env.agent_interface &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/agent_studio/envs/desktop_env/agent_interface/index';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="agent_studio.envs.desktop_env.human_interface" href="../human_interface/index.html" />
+    <link rel="prev" title="agent_studio.envs.desktop_env.tools.mouse" href="../tools/mouse/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../../index.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/autoapi/agent_studio/envs/desktop_env/agent_interface/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>agent_studio.envs.desktop_env.agent_interface</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.config"><code class="docutils literal notranslate"><span class="pre">config</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.logger"><code class="docutils literal notranslate"><span class="pre">logger</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR"><code class="docutils literal notranslate"><span class="pre">REMOTE_SERVER_ADDR</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer"><code class="docutils literal notranslate"><span class="pre">FrameBuffer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.add_frame"><code class="docutils literal notranslate"><span class="pre">FrameBuffer.add_frame()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.clear"><code class="docutils literal notranslate"><span class="pre">FrameBuffer.clear()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.get_frames"><code class="docutils literal notranslate"><span class="pre">FrameBuffer.get_frames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><code class="docutils literal notranslate"><span class="pre">WorkerSignals</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.confirm_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.confirm_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.decline_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.decline_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.start_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.start_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.eval_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.eval_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.status_bar_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.status_bar_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.parsed_action_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.parsed_action_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.response_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.response_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.evaluation_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.evaluation_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.show_dialog_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.show_dialog_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.output_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.output_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.save_trajectory_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.save_trajectory_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.finish_run_task_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.finish_run_task_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.trajectory_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.trajectory_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.generate_action_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.generate_action_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.popup_window_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.popup_window_signal</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog"><code class="docutils literal notranslate"><span class="pre">InputDialog</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog.accept"><code class="docutils literal notranslate"><span class="pre">InputDialog.accept()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread"><code class="docutils literal notranslate"><span class="pre">ResetRuntimeThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.run"><code class="docutils literal notranslate"><span class="pre">ResetRuntimeThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">ResetRuntimeThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread"><code class="docutils literal notranslate"><span class="pre">ResetTaskThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.run"><code class="docutils literal notranslate"><span class="pre">ResetTaskThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">ResetTaskThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread"><code class="docutils literal notranslate"><span class="pre">GenerateActionThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread.run"><code class="docutils literal notranslate"><span class="pre">GenerateActionThread.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread"><code class="docutils literal notranslate"><span class="pre">EvalTaskThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.run"><code class="docutils literal notranslate"><span class="pre">EvalTaskThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">EvalTaskThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread"><code class="docutils literal notranslate"><span class="pre">StepActionThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread.run"><code class="docutils literal notranslate"><span class="pre">StepActionThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">StepActionThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface"><code class="docutils literal notranslate"><span class="pre">AgentInterface</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.layout_width"><code class="docutils literal notranslate"><span class="pre">AgentInterface.layout_width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.setup_ui"><code class="docutils literal notranslate"><span class="pre">AgentInterface.setup_ui()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.load_task_results"><code class="docutils literal notranslate"><span class="pre">AgentInterface.load_task_results()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.populate_instruction_selection_widget"><code class="docutils literal notranslate"><span class="pre">AgentInterface.populate_instruction_selection_widget()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.select_task_instruction"><code class="docutils literal notranslate"><span class="pre">AgentInterface.select_task_instruction()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.set_task_status_bar_text"><code class="docutils literal notranslate"><span class="pre">AgentInterface.set_task_status_bar_text()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_input_dialog"><code class="docutils literal notranslate"><span class="pre">AgentInterface.show_input_dialog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_choice_dialog"><code class="docutils literal notranslate"><span class="pre">AgentInterface.show_choice_dialog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_error_popup_dialog"><code class="docutils literal notranslate"><span class="pre">AgentInterface.show_error_popup_dialog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reset"><code class="docutils literal notranslate"><span class="pre">AgentInterface.reset()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reconnect"><code class="docutils literal notranslate"><span class="pre">AgentInterface.reconnect()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.save_trajectory"><code class="docutils literal notranslate"><span class="pre">AgentInterface.save_trajectory()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.run_task"><code class="docutils literal notranslate"><span class="pre">AgentInterface.run_task()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.generate_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.generate_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.eval_task"><code class="docutils literal notranslate"><span class="pre">AgentInterface.eval_task()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.finish_run_task"><code class="docutils literal notranslate"><span class="pre">AgentInterface.finish_run_task()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reject_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.reject_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.step_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.step_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.interrupt_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.interrupt_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.update_screen"><code class="docutils literal notranslate"><span class="pre">AgentInterface.update_screen()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.render"><code class="docutils literal notranslate"><span class="pre">AgentInterface.render()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.closeEvent"><code class="docutils literal notranslate"><span class="pre">AgentInterface.closeEvent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-agent_studio.envs.desktop_env.agent_interface">
+<span id="agent-studio-envs-desktop-env-agent-interface"></span><h1><a class="reference internal" href="#module-agent_studio.envs.desktop_env.agent_interface" title="agent_studio.envs.desktop_env.agent_interface"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env.agent_interface</span></code></a><a class="headerlink" href="#module-agent_studio.envs.desktop_env.agent_interface" title="Permalink to this heading">#</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer" title="agent_studio.envs.desktop_env.agent_interface.FrameBuffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameBuffer</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkerSignals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog" title="agent_studio.envs.desktop_env.agent_interface.InputDialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputDialog</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread" title="agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResetRuntimeThread</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread" title="agent_studio.envs.desktop_env.agent_interface.ResetTaskThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResetTaskThread</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread" title="agent_studio.envs.desktop_env.agent_interface.GenerateActionThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateActionThread</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread" title="agent_studio.envs.desktop_env.agent_interface.EvalTaskThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvalTaskThread</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread" title="agent_studio.envs.desktop_env.agent_interface.StepActionThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StepActionThread</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface" title="agent_studio.envs.desktop_env.agent_interface.AgentInterface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AgentInterface</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.config" title="agent_studio.envs.desktop_env.agent_interface.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.logger" title="agent_studio.envs.desktop_env.agent_interface.logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logger</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR" title="agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">REMOTE_SERVER_ADDR</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.config">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">config</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.logger">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">logger</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.logger" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR">
+<span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">REMOTE_SERVER_ADDR</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#REMOTE_SERVER_ADDR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.FrameBuffer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">FrameBuffer</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#FrameBuffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer" title="Permalink to this definition">#</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.FrameBuffer.add_frame">
+<span class="sig-name descname"><span class="pre">add_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#FrameBuffer.add_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.add_frame" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.FrameBuffer.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#FrameBuffer.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.clear" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.FrameBuffer.get_frames">
+<span class="sig-name descname"><span class="pre">get_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#FrameBuffer.get_frames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.get_frames" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">WorkerSignals</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtCore.QObject</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.confirm_signal">
+<span class="sig-name descname"><span class="pre">confirm_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.confirm_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.confirm_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.decline_signal">
+<span class="sig-name descname"><span class="pre">decline_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.decline_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.decline_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.start_signal">
+<span class="sig-name descname"><span class="pre">start_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.start_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.start_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.eval_signal">
+<span class="sig-name descname"><span class="pre">eval_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.eval_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.eval_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.status_bar_signal">
+<span class="sig-name descname"><span class="pre">status_bar_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.status_bar_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.status_bar_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.parsed_action_display_signal">
+<span class="sig-name descname"><span class="pre">parsed_action_display_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.parsed_action_display_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.parsed_action_display_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.response_display_signal">
+<span class="sig-name descname"><span class="pre">response_display_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.response_display_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.response_display_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.evaluation_display_signal">
+<span class="sig-name descname"><span class="pre">evaluation_display_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.evaluation_display_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.evaluation_display_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.show_dialog_signal">
+<span class="sig-name descname"><span class="pre">show_dialog_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.show_dialog_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.show_dialog_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.output_display_signal">
+<span class="sig-name descname"><span class="pre">output_display_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.output_display_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.output_display_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.save_trajectory_signal">
+<span class="sig-name descname"><span class="pre">save_trajectory_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.save_trajectory_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.save_trajectory_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.finish_run_task_signal">
+<span class="sig-name descname"><span class="pre">finish_run_task_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.finish_run_task_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.finish_run_task_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.trajectory_display_signal">
+<span class="sig-name descname"><span class="pre">trajectory_display_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.trajectory_display_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.trajectory_display_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.generate_action_signal">
+<span class="sig-name descname"><span class="pre">generate_action_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.generate_action_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.generate_action_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.WorkerSignals.popup_window_signal">
+<span class="sig-name descname"><span class="pre">popup_window_signal</span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#WorkerSignals.popup_window_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.popup_window_signal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.InputDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">InputDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#InputDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtWidgets.QDialog</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.InputDialog.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#InputDialog.accept"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog.accept" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">ResetRuntimeThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><span class="pre">WorkerSignals</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#ResetRuntimeThread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtCore.QThread</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#ResetRuntimeThread.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.run" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.receive_user_input">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">receive_user_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#ResetRuntimeThread.receive_user_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.receive_user_input" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.ResetTaskThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">ResetTaskThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../agent/base_agent/index.html#agent_studio.agent.base_agent.BaseAgent" title="agent_studio.agent.base_agent.BaseAgent"><span class="pre">agent_studio.agent.base_agent.BaseAgent</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">signals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><span class="pre">WorkerSignals</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#ResetTaskThread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtCore.QThread</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#ResetTaskThread.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.run" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.receive_user_input">
+<span class="sig-name descname"><span class="pre">receive_user_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#ResetTaskThread.receive_user_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.receive_user_input" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.GenerateActionThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">GenerateActionThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><span class="pre">WorkerSignals</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../agent/base_agent/index.html#agent_studio.agent.base_agent.BaseAgent" title="agent_studio.agent.base_agent.BaseAgent"><span class="pre">agent_studio.agent.base_agent.BaseAgent</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#GenerateActionThread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtCore.QThread</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.GenerateActionThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#GenerateActionThread.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread.run" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.EvalTaskThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">EvalTaskThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><span class="pre">WorkerSignals</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory_display</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PyQt6.QtWidgets.QTextEdit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../agent/base_agent/index.html#agent_studio.agent.base_agent.BaseAgent" title="agent_studio.agent.base_agent.BaseAgent"><span class="pre">agent_studio.agent.base_agent.BaseAgent</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">queue.Queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_obs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#EvalTaskThread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtCore.QThread</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#EvalTaskThread.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.run" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.receive_user_input">
+<span class="sig-name descname"><span class="pre">receive_user_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#EvalTaskThread.receive_user_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.receive_user_input" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.StepActionThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">StepActionThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals" title="agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><span class="pre">WorkerSignals</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory_display</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PyQt6.QtWidgets.QTextEdit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parsed_action_display</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PyQt6.QtWidgets.QTextEdit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen_recorder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../recorder/screen_recorder/index.html#agent_studio.envs.desktop_env.recorder.screen_recorder.ScreenRecorder" title="agent_studio.envs.desktop_env.recorder.screen_recorder.ScreenRecorder"><span class="pre">agent_studio.envs.desktop_env.recorder.screen_recorder.ScreenRecorder</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_step_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../agent/base_agent/index.html#agent_studio.agent.base_agent.BaseAgent" title="agent_studio.agent.base_agent.BaseAgent"><span class="pre">agent_studio.agent.base_agent.BaseAgent</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#StepActionThread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtCore.QThread</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.StepActionThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#StepActionThread.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Steps the next action and adds it to the trajectory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.StepActionThread.receive_user_input">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">receive_user_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#StepActionThread.receive_user_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread.receive_user_input" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">agent_studio.envs.desktop_env.agent_interface.</span></span><span class="sig-name descname"><span class="pre">AgentInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../agent/base_agent/index.html#agent_studio.agent.base_agent.BaseAgent" title="agent_studio.agent.base_agent.BaseAgent"><span class="pre">agent_studio.agent.base_agent.BaseAgent</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">config.record_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PyQt6.QtWidgets.QMainWindow</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.layout_width">
+<span class="sig-name descname"><span class="pre">layout_width</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">300</span></em><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.layout_width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.layout_width" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.setup_ui">
+<span class="sig-name descname"><span class="pre">setup_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.setup_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.setup_ui" title="Permalink to this definition">#</a></dt>
+<dd><p>Sets up the UI, including the VNC frame (left) and the right layout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.load_task_results">
+<span class="sig-name descname"><span class="pre">load_task_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.load_task_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.load_task_results" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.populate_instruction_selection_widget">
+<span class="sig-name descname"><span class="pre">populate_instruction_selection_widget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.populate_instruction_selection_widget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.populate_instruction_selection_widget" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.select_task_instruction">
+<span class="sig-name descname"><span class="pre">select_task_instruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.select_task_instruction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.select_task_instruction" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.set_task_status_bar_text">
+<span class="sig-name descname"><span class="pre">set_task_status_bar_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.set_task_status_bar_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.set_task_status_bar_text" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_input_dialog">
+<span class="sig-name descname"><span class="pre">show_input_dialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.show_input_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_input_dialog" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_choice_dialog">
+<span class="sig-name descname"><span class="pre">show_choice_dialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.show_choice_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_choice_dialog" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_error_popup_dialog">
+<span class="sig-name descname"><span class="pre">show_error_popup_dialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.show_error_popup_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_error_popup_dialog" title="Permalink to this definition">#</a></dt>
+<dd><p>Shows a popup message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reset" title="Permalink to this definition">#</a></dt>
+<dd><p>Resets the task and waits for the environment to be ready.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.reconnect">
+<span class="sig-name descname"><span class="pre">reconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.reconnect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reconnect" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.save_trajectory">
+<span class="sig-name descname"><span class="pre">save_trajectory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.save_trajectory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.save_trajectory" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.run_task">
+<span class="sig-name descname"><span class="pre">run_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.run_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.run_task" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.generate_action">
+<span class="sig-name descname"><span class="pre">generate_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.generate_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.generate_action" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.eval_task">
+<span class="sig-name descname"><span class="pre">eval_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.eval_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.eval_task" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.finish_run_task">
+<span class="sig-name descname"><span class="pre">finish_run_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.finish_run_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.finish_run_task" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.reject_action">
+<span class="sig-name descname"><span class="pre">reject_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.reject_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reject_action" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.step_action">
+<span class="sig-name descname"><span class="pre">step_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.step_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.step_action" title="Permalink to this definition">#</a></dt>
+<dd><p>Steps the next action and adds it to the trajectory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.interrupt_action">
+<span class="sig-name descname"><span class="pre">interrupt_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.interrupt_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.interrupt_action" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.update_screen">
+<span class="sig-name descname"><span class="pre">update_screen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.update_screen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.update_screen" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.render"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.render" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agent_studio.envs.desktop_env.agent_interface.AgentInterface.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/agent_studio/envs/desktop_env/agent_interface.html#AgentInterface.closeEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.closeEvent" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../tools/mouse/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env.tools.mouse</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../human_interface/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env.human_interface</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.config"><code class="docutils literal notranslate"><span class="pre">config</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.logger"><code class="docutils literal notranslate"><span class="pre">logger</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.REMOTE_SERVER_ADDR"><code class="docutils literal notranslate"><span class="pre">REMOTE_SERVER_ADDR</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer"><code class="docutils literal notranslate"><span class="pre">FrameBuffer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.add_frame"><code class="docutils literal notranslate"><span class="pre">FrameBuffer.add_frame()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.clear"><code class="docutils literal notranslate"><span class="pre">FrameBuffer.clear()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.FrameBuffer.get_frames"><code class="docutils literal notranslate"><span class="pre">FrameBuffer.get_frames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals"><code class="docutils literal notranslate"><span class="pre">WorkerSignals</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.confirm_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.confirm_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.decline_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.decline_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.start_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.start_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.eval_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.eval_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.status_bar_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.status_bar_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.parsed_action_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.parsed_action_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.response_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.response_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.evaluation_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.evaluation_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.show_dialog_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.show_dialog_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.output_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.output_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.save_trajectory_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.save_trajectory_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.finish_run_task_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.finish_run_task_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.trajectory_display_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.trajectory_display_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.generate_action_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.generate_action_signal</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.WorkerSignals.popup_window_signal"><code class="docutils literal notranslate"><span class="pre">WorkerSignals.popup_window_signal</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog"><code class="docutils literal notranslate"><span class="pre">InputDialog</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.InputDialog.accept"><code class="docutils literal notranslate"><span class="pre">InputDialog.accept()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread"><code class="docutils literal notranslate"><span class="pre">ResetRuntimeThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.run"><code class="docutils literal notranslate"><span class="pre">ResetRuntimeThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetRuntimeThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">ResetRuntimeThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread"><code class="docutils literal notranslate"><span class="pre">ResetTaskThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.run"><code class="docutils literal notranslate"><span class="pre">ResetTaskThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.ResetTaskThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">ResetTaskThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread"><code class="docutils literal notranslate"><span class="pre">GenerateActionThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.GenerateActionThread.run"><code class="docutils literal notranslate"><span class="pre">GenerateActionThread.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread"><code class="docutils literal notranslate"><span class="pre">EvalTaskThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.run"><code class="docutils literal notranslate"><span class="pre">EvalTaskThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.EvalTaskThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">EvalTaskThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread"><code class="docutils literal notranslate"><span class="pre">StepActionThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread.run"><code class="docutils literal notranslate"><span class="pre">StepActionThread.run()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.StepActionThread.receive_user_input"><code class="docutils literal notranslate"><span class="pre">StepActionThread.receive_user_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface"><code class="docutils literal notranslate"><span class="pre">AgentInterface</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.layout_width"><code class="docutils literal notranslate"><span class="pre">AgentInterface.layout_width</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.setup_ui"><code class="docutils literal notranslate"><span class="pre">AgentInterface.setup_ui()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.load_task_results"><code class="docutils literal notranslate"><span class="pre">AgentInterface.load_task_results()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.populate_instruction_selection_widget"><code class="docutils literal notranslate"><span class="pre">AgentInterface.populate_instruction_selection_widget()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.select_task_instruction"><code class="docutils literal notranslate"><span class="pre">AgentInterface.select_task_instruction()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.set_task_status_bar_text"><code class="docutils literal notranslate"><span class="pre">AgentInterface.set_task_status_bar_text()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_input_dialog"><code class="docutils literal notranslate"><span class="pre">AgentInterface.show_input_dialog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_choice_dialog"><code class="docutils literal notranslate"><span class="pre">AgentInterface.show_choice_dialog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.show_error_popup_dialog"><code class="docutils literal notranslate"><span class="pre">AgentInterface.show_error_popup_dialog()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reset"><code class="docutils literal notranslate"><span class="pre">AgentInterface.reset()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reconnect"><code class="docutils literal notranslate"><span class="pre">AgentInterface.reconnect()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.save_trajectory"><code class="docutils literal notranslate"><span class="pre">AgentInterface.save_trajectory()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.run_task"><code class="docutils literal notranslate"><span class="pre">AgentInterface.run_task()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.generate_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.generate_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.eval_task"><code class="docutils literal notranslate"><span class="pre">AgentInterface.eval_task()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.finish_run_task"><code class="docutils literal notranslate"><span class="pre">AgentInterface.finish_run_task()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.reject_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.reject_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.step_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.step_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.interrupt_action"><code class="docutils literal notranslate"><span class="pre">AgentInterface.interrupt_action()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.update_screen"><code class="docutils literal notranslate"><span class="pre">AgentInterface.update_screen()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.render"><code class="docutils literal notranslate"><span class="pre">AgentInterface.render()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#agent_studio.envs.desktop_env.agent_interface.AgentInterface.closeEvent"><code class="docutils literal notranslate"><span class="pre">AgentInterface.closeEvent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

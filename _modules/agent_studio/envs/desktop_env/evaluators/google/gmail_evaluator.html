@@ -1,0 +1,900 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator &#8212; AgentStudio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/graphviz.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../../_static/doctools.js"></script>
+    <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator';</script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-light" alt="AgentStudio - Home"/>
+    <script>document.write(`<img src="../../../../../../_static/agent-studio-logo-text-light.png" class="logo__image only-dark" alt="AgentStudio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../../doc_index.html">Welcome to AgentStudio!</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/setup_api_keys.html">Setup API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/evaluate_agents.html">Evaluate Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/create_agents.html">Create Your Own Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/connect_model.html">Connect to Your Own Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/upload_results.html">Upload Results to Hugging Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/start_recording.html">Record Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/annotation.html">Record GUI Grounding Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../getting_started/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../../autoapi/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/base_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.base_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/direct_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.direct_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/human_agent/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.human_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/agent/runtime/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.agent.runtime</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/config/config/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.config.config</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/envs/desktop_env/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.envs.desktop_env</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/base_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.base_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/claude/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.claude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/gemini/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.gemini</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/huggingface/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.huggingface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/openai/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.openai</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/remote_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.remote_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/llm/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.llm.utils</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/human_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.human_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/json_utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.json_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/prompt/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/singleton/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.singleton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../autoapi/agent_studio/utils/task_status/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">agent_studio.utils.task_status</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SkyworkAI/agent-studio" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+<span class="kn">from</span> <span class="nn">agent_studio.config</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.evaluators.evaluator</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FeedbackException</span><span class="p">,</span>
+    <span class="n">evaluation_handler</span><span class="p">,</span>
+    <span class="n">reset_handler</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.evaluators.google.evaluator_base</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">GoogleEvaluatorBase</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">agent_studio.envs.desktop_env.evaluators.google.gservice</span> <span class="kn">import</span> <span class="n">GoogleService</span>
+<span class="kn">from</span> <span class="nn">agent_studio.utils.human_utils</span> <span class="kn">import</span> <span class="n">confirm_action</span>
+
+<div class="viewcode-block" id="config"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.config">[docs]</a><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span></div>
+<div class="viewcode-block" id="logger"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.logger">[docs]</a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="extract_email"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.extract_email">[docs]</a><span class="k">def</span> <span class="nf">extract_email</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extracts the first email address from the given string.&quot;&quot;&quot;</span>
+    <span class="c1"># Regex pattern to match email addresses</span>
+    <span class="n">email_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[\w\.-]+@[\w\.-]+&quot;</span>
+
+    <span class="c1"># Find all matches in the string</span>
+    <span class="n">emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">email_pattern</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+    <span class="c1"># Return the first found email or None if no email is found</span>
+    <span class="k">return</span> <span class="n">emails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">emails</span> <span class="k">else</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="message_match"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.message_match">[docs]</a><span class="k">def</span> <span class="nf">message_match</span><span class="p">(</span><span class="n">msg_to_match</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">ref_msg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks if the msg_to_match matches the ref_msg.&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="s2">&quot;recipient&quot;</span> <span class="ow">in</span> <span class="n">ref_msg</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">&amp;=</span> <span class="n">extract_email</span><span class="p">(</span><span class="n">msg_to_match</span><span class="p">[</span><span class="s2">&quot;recipient&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">extract_email</span><span class="p">(</span>
+            <span class="n">ref_msg</span><span class="p">[</span><span class="s2">&quot;recipient&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;body&quot;</span> <span class="ow">in</span> <span class="n">ref_msg</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">&amp;=</span> <span class="n">msg_to_match</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="n">ref_msg</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="s2">&quot;attachment&quot;</span><span class="p">,</span> <span class="s2">&quot;cc&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">ref_msg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">&amp;=</span> <span class="n">msg_to_match</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="n">ref_msg</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="get_attachment_name"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.get_attachment_name">[docs]</a><span class="k">def</span> <span class="nf">get_attachment_name</span><span class="p">(</span><span class="n">raw_message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves the name of the attachment, if any.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;parts&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;parts&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">part</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;filename: </span><span class="si">{</span><span class="n">part</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">part</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="get_body"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.get_body">[docs]</a><span class="k">def</span> <span class="nf">get_body</span><span class="p">(</span><span class="n">raw_message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Decodes the body of the message.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;body&quot;</span><span class="p">][</span><span class="s2">&quot;size&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Check if there are multiple parts</span>
+        <span class="k">if</span> <span class="s2">&quot;parts&quot;</span> <span class="ow">in</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;parts&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="s2">&quot;parts&quot;</span> <span class="ow">in</span> <span class="n">part</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">small_part</span> <span class="ow">in</span> <span class="n">part</span><span class="p">[</span><span class="s2">&quot;parts&quot;</span><span class="p">]:</span>
+                        <span class="k">if</span> <span class="n">small_part</span><span class="p">[</span><span class="s2">&quot;mimeType&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">:</span>
+                            <span class="n">body_data</span> <span class="o">=</span> <span class="n">small_part</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">][</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+                            <span class="n">decoded_body</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64decode</span><span class="p">(</span>
+                                <span class="n">body_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">)</span>
+                            <span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                            <span class="k">return</span> <span class="n">decoded_body</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">part</span><span class="p">[</span><span class="s2">&quot;mimeType&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">:</span>
+                        <span class="n">body_data</span> <span class="o">=</span> <span class="n">part</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">][</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+                        <span class="n">decoded_body</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64decode</span><span class="p">(</span>
+                            <span class="n">body_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">)</span>
+                        <span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">decoded_body</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># If the body is empty, return empty string</span>
+            <span class="n">decoded_body</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">body_data</span> <span class="o">=</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;body&quot;</span><span class="p">][</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+        <span class="n">decoded_body</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64decode</span><span class="p">(</span><span class="n">body_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">decoded_body</span></div>
+
+
+<div class="viewcode-block" id="get_message_from_raw"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.get_message_from_raw">[docs]</a><span class="k">def</span> <span class="nf">get_message_from_raw</span><span class="p">(</span><span class="n">raw_message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">raw_message</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">][</span><span class="s2">&quot;headers&quot;</span><span class="p">]</span>
+    <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+        <span class="n">header</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span> <span class="k">if</span> <span class="n">header</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;subject&quot;</span>
+    <span class="p">)</span>
+    <span class="n">recipient</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+        <span class="n">header</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span> <span class="k">if</span> <span class="n">header</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;to&quot;</span>
+    <span class="p">)</span>
+    <span class="n">cc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">cc</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+            <span class="n">header</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span> <span class="k">if</span> <span class="n">header</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;cc&quot;</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="n">cc</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">body</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">get_body</span><span class="p">(</span><span class="n">raw_message</span><span class="p">)</span>
+    <span class="n">attachment</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">get_attachment_name</span><span class="p">(</span><span class="n">raw_message</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span>
+        <span class="n">recipient</span><span class="o">=</span><span class="n">recipient</span><span class="p">,</span>
+        <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+        <span class="n">cc</span><span class="o">=</span><span class="n">cc</span><span class="p">,</span>
+        <span class="n">attachment</span><span class="o">=</span><span class="n">attachment</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="GmailEvaluator"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator">[docs]</a><span class="k">class</span> <span class="nc">GmailEvaluator</span><span class="p">(</span><span class="n">GoogleEvaluatorBase</span><span class="p">):</span>
+<div class="viewcode-block" id="GmailEvaluator.name"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.name">[docs]</a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;gmail&quot;</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">eval_procedure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+        <span class="n">reset_procedure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">eval_procedure</span><span class="o">=</span><span class="n">eval_procedure</span><span class="p">,</span>
+            <span class="n">reset_procedure</span><span class="o">=</span><span class="n">reset_procedure</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span> <span class="o">=</span> <span class="n">GoogleService</span><span class="p">(</span>
+            <span class="n">scopes</span><span class="o">=</span><span class="p">[</span>
+                <span class="s2">&quot;https://www.googleapis.com/auth/gmail.compose&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;https://www.googleapis.com/auth/gmail.readonly&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;https://mail.google.com/&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;gmail&quot;</span><span class="p">,</span>
+            <span class="n">service_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">service</span>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;check_draft_exists&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.check_draft_exists"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.check_draft_exists">[docs]</a>    <span class="k">def</span> <span class="nf">check_draft_exists</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">draft_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">exists</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks if the given draft exists.&quot;&quot;&quot;</span>
+        <span class="n">drafts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span><span class="n">message_info</span><span class="o">=</span><span class="n">draft_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;drafts&quot;</span><span class="p">)</span>
+        <span class="n">draft_exists</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">drafts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">draft_exists</span> <span class="o">!=</span> <span class="n">exists</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The error occured when checking if the existence of &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;the draft </span><span class="si">{</span><span class="n">draft_info</span><span class="si">}</span><span class="s2">. It should be </span><span class="si">{</span><span class="n">exists</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span></div>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;check_sent_message_exists&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.check_sent_message_exists"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.check_sent_message_exists">[docs]</a>    <span class="k">def</span> <span class="nf">check_sent_message_exists</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">exists</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks if the given sent message exists.&quot;&quot;&quot;</span>
+        <span class="n">sent_messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span>
+            <span class="n">message_info</span><span class="o">=</span><span class="n">message_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span>
+        <span class="p">)</span>
+        <span class="n">sent_message_exists</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sent_messages</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">sent_message_exists</span> <span class="o">!=</span> <span class="n">exists</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The error occured when checking if the existence of &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;the sent message </span><span class="si">{</span><span class="n">message_info</span><span class="si">}</span><span class="s2">. It should be </span><span class="si">{</span><span class="n">exists</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span></div>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;is_email_marked_important&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.is_email_marked_important"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.is_email_marked_important">[docs]</a>    <span class="k">def</span> <span class="nf">is_email_marked_important</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">gt</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks if the email with the given ID is marked as important.&quot;&quot;&quot;</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span>
+            <span class="n">message_info</span><span class="o">=</span><span class="n">message_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                    <span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="n">msg</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="n">metadataHeaders</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LabelIds&quot;</span><span class="p">],</span>
+                <span class="p">)</span>
+                <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">is_important</span> <span class="o">=</span> <span class="s2">&quot;IMPORTANT&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labelIds&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="k">if</span> <span class="n">is_important</span> <span class="o">!=</span> <span class="n">gt</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Email </span><span class="si">{</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> is marked as important: </span><span class="si">{</span><span class="n">is_important</span><span class="si">}</span><span class="s2">. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;It should be </span><span class="si">{</span><span class="n">gt</span><span class="si">}</span><span class="s2">.&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;check_label_exists&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.check_label_exists"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.check_label_exists">[docs]</a>    <span class="k">def</span> <span class="nf">check_label_exists</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">label_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">exists</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks if a label exists by name.&quot;&quot;&quot;</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">labels</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labels&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="p">)</span>
+        <span class="n">label_exists</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span>
+            <span class="n">label</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span> <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">label_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">label_exists</span> <span class="o">!=</span> <span class="n">exists</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Label </span><span class="si">{</span><span class="n">label_name</span><span class="si">}</span><span class="s2"> exists: </span><span class="si">{</span><span class="n">label_exists</span><span class="si">}</span><span class="s2">. &quot;</span> <span class="sa">f</span><span class="s2">&quot;It should be </span><span class="si">{</span><span class="n">exists</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span></div>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;email_has_label&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.email_has_label"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.email_has_label">[docs]</a>    <span class="k">def</span> <span class="nf">email_has_label</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">label_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">gt</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span>
+            <span class="n">message_info</span><span class="o">=</span><span class="n">message_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">msg</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;metadata&quot;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">label_ids</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labelIds&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="n">all_labels</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">labels</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labels&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="p">)</span>
+            <span class="n">label_id</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="n">label</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+                    <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">all_labels</span>
+                    <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">label_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="p">),</span>
+                <span class="kc">None</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">email_has_label</span> <span class="o">=</span> <span class="n">label_id</span> <span class="ow">in</span> <span class="n">label_ids</span> <span class="k">if</span> <span class="n">label_id</span> <span class="k">else</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">email_has_label</span> <span class="o">!=</span> <span class="n">gt</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Email </span><span class="si">{</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> has label </span><span class="si">{</span><span class="n">label_name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">email_has_label</span><span class="si">}</span><span class="s2">. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;It should be </span><span class="si">{</span><span class="n">gt</span><span class="si">}</span><span class="s2">.&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;delete_label&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.delete_label"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.delete_label">[docs]</a>    <span class="k">def</span> <span class="nf">delete_label</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">label_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">all_labels</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">labels</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labels&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="p">)</span>
+        <span class="n">label_id</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">label</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">all_labels</span>
+                <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">label_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="p">),</span>
+            <span class="kc">None</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">label_id</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">labels</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">label_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;create_label&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.create_label"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.create_label">[docs]</a>    <span class="k">def</span> <span class="nf">create_label</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">label_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">label_list_visibility</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;labelShow&quot;</span><span class="p">,</span>
+        <span class="n">message_list_visibility</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;show&quot;</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">new_label</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">label_name</span><span class="p">,</span>
+            <span class="s2">&quot;labelListVisibility&quot;</span><span class="p">:</span> <span class="n">label_list_visibility</span><span class="p">,</span>
+            <span class="s2">&quot;messageListVisibility&quot;</span><span class="p">:</span> <span class="n">message_list_visibility</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">labels</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">new_label</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span></div>
+
+    <span class="nd">@evaluation_handler</span><span class="p">(</span><span class="s2">&quot;is_email_in_trash&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.is_email_in_trash"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.is_email_in_trash">[docs]</a>    <span class="k">def</span> <span class="nf">is_email_in_trash</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">in_trash</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks if the email with the given ID exists in trash.&quot;&quot;&quot;</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span>
+            <span class="n">message_info</span><span class="o">=</span><span class="n">message_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                    <span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="n">msg</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="n">metadataHeaders</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LabelIds&quot;</span><span class="p">],</span>
+                <span class="p">)</span>
+                <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">email_in_trash</span> <span class="o">=</span> <span class="s2">&quot;TRASH&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labelIds&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="k">if</span> <span class="n">email_in_trash</span> <span class="o">!=</span> <span class="n">in_trash</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">FeedbackException</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Email </span><span class="si">{</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> is in trash: </span><span class="si">{</span><span class="n">email_in_trash</span><span class="si">}</span><span class="s2">. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;It should be </span><span class="si">{</span><span class="n">in_trash</span><span class="si">}</span><span class="s2">.&quot;</span>
+                <span class="p">)</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;create_draft&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.create_draft"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.create_draft">[docs]</a>    <span class="k">def</span> <span class="nf">create_draft</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">draft_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates a draft email message in the user&#39;s mailbox.&quot;&quot;&quot;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">set_content</span><span class="p">(</span><span class="n">draft_info</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">])</span>  <span class="c1"># &quot;This is automated draft mail&quot;</span>
+        <span class="n">message</span><span class="p">[</span><span class="s2">&quot;To&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">draft_info</span><span class="p">[</span><span class="s2">&quot;recipient&quot;</span><span class="p">]</span>  <span class="c1"># &quot;gduser1@workspacesamples.dev&quot;</span>
+        <span class="n">message</span><span class="p">[</span><span class="s2">&quot;Subject&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">draft_info</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">]</span>  <span class="c1"># &quot;Automated draft&quot;</span>
+
+        <span class="n">encoded_message</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">as_bytes</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="n">create_message</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">encoded_message</span><span class="p">}}</span>
+        <span class="n">draft</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">drafts</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">create_message</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Draft message: </span><span class="si">{</span><span class="n">draft</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;delete_draft&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.delete_draft"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.delete_draft">[docs]</a>    <span class="k">def</span> <span class="nf">delete_draft</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">draft_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deletes the draft that matches the given criteria.&quot;&quot;&quot;</span>
+        <span class="n">drafts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span><span class="n">message_info</span><span class="o">=</span><span class="n">draft_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;drafts&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">draft</span> <span class="ow">in</span> <span class="n">drafts</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deleting draft with subject </span><span class="si">{</span><span class="n">draft</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">confirm_action</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deleting draft with subject </span><span class="si">{</span><span class="n">draft</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">delete_draft_by_id</span>
+            <span class="p">)(</span><span class="n">draft</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;add_email_to_trash&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.add_email_to_trash"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.add_email_to_trash">[docs]</a>    <span class="k">def</span> <span class="nf">add_email_to_trash</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves an email to the trash.&quot;&quot;&quot;</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span>
+            <span class="n">message_info</span><span class="o">=</span><span class="n">message_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">trash</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">msg</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;delete_sent_message&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.delete_sent_message"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.delete_sent_message">[docs]</a>    <span class="k">def</span> <span class="nf">delete_sent_message</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deletes the sent message with the given criteria.&quot;&quot;&quot;</span>
+        <span class="n">sent_messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_messages</span><span class="p">(</span>
+            <span class="n">message_info</span><span class="o">=</span><span class="n">message_info</span><span class="p">,</span> <span class="n">message_type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">sent_message</span> <span class="ow">in</span> <span class="n">sent_messages</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Deleting sent message with subject </span><span class="si">{</span><span class="n">sent_message</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+            <span class="n">confirm_action</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Deleting sent message with subject </span><span class="si">{</span><span class="n">sent_message</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)(</span><span class="bp">self</span><span class="o">.</span><span class="n">delete_sent_message_by_id</span><span class="p">)(</span><span class="n">sent_message</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;send_message&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.send_message"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.send_message">[docs]</a>    <span class="k">def</span> <span class="nf">send_message</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates and sends an email message.&quot;&quot;&quot;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">set_content</span><span class="p">(</span><span class="n">message_info</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">])</span>
+        <span class="n">message</span><span class="p">[</span><span class="s2">&quot;To&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;recipient&quot;</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">gmail_recipient</span><span class="p">)</span>
+        <span class="n">message</span><span class="p">[</span><span class="s2">&quot;Subject&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message_info</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">]</span>
+        <span class="n">encoded_message</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">as_bytes</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="n">create_message</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">encoded_message</span><span class="p">}</span>
+
+        <span class="nd">@confirm_action</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sending the message </span><span class="si">{</span><span class="n">message_info</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">_send</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+                <span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">create_message</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Message sent successfully.&quot;</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sending the message </span><span class="si">{</span><span class="n">message_info</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="n">_send</span><span class="p">()</span></div>
+
+    <span class="nd">@reset_handler</span><span class="p">(</span><span class="s2">&quot;mark_message_important&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="GmailEvaluator.mark_message_important"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.mark_message_important">[docs]</a>    <span class="k">def</span> <span class="nf">mark_message_important</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">is_important</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">subject_contains</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Marks the email with the given subject as important.&quot;&quot;&quot;</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;subject:</span><span class="si">{</span><span class="n">subject_contains</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;messages&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">message</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;metadata&quot;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">is_important</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span>
+                    <span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">message</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">body</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;addLabelIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;IMPORTANT&quot;</span><span class="p">]}</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span>
+                    <span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="n">message</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                    <span class="n">body</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;removeLabelIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;IMPORTANT&quot;</span><span class="p">]},</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="GmailEvaluator.get_message"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.get_message">[docs]</a>    <span class="k">def</span> <span class="nf">get_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the full message using the message ID.&quot;&quot;&quot;</span>
+        <span class="n">raw_message</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">message_id</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">get_message_from_raw</span><span class="p">(</span><span class="n">raw_message</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GmailEvaluator.search_messages"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.search_messages">[docs]</a>    <span class="k">def</span> <span class="nf">search_messages</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">message_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">message_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches the messages that match the given criteria.&quot;&quot;&quot;</span>
+        <span class="c1"># Construct the search query</span>
+        <span class="n">search_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;subject&quot;</span> <span class="ow">in</span> <span class="n">message_info</span><span class="p">:</span>
+            <span class="n">search_query</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;subject:</span><span class="si">{</span><span class="n">message_info</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> &#39;</span>
+        <span class="k">if</span> <span class="s2">&quot;recipient&quot;</span> <span class="ow">in</span> <span class="n">message_info</span><span class="p">:</span>
+            <span class="n">search_query</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;to:</span><span class="si">{</span><span class="n">message_info</span><span class="p">[</span><span class="s2">&quot;recipient&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> &#39;</span>
+        <span class="k">if</span> <span class="s2">&quot;cc&quot;</span> <span class="ow">in</span> <span class="n">message_info</span><span class="p">:</span>
+            <span class="n">search_query</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;cc:</span><span class="si">{</span><span class="n">message_info</span><span class="p">[</span><span class="s2">&quot;cc&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> &#39;</span>
+
+        <span class="k">match</span> <span class="n">message_type</span><span class="p">:</span>
+            <span class="k">case</span> <span class="s2">&quot;messages&quot;</span><span class="p">:</span>
+                <span class="n">search_result</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                    <span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+                    <span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">search_query</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+                <span class="p">)</span>
+                <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">search_result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;messages&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_message</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+                    <span class="n">msg</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+                    <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">case</span> <span class="s2">&quot;drafts&quot;</span><span class="p">:</span>
+                <span class="n">search_result</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
+                    <span class="o">.</span><span class="n">drafts</span><span class="p">()</span>
+                    <span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">search_query</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+                <span class="p">)</span>
+                <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">search_result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;drafts&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_message</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+                    <span class="n">msg</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+                    <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;message_type must be &#39;messages&#39; or &#39;drafts&#39;&quot;</span><span class="p">)</span>
+
+        <span class="n">matching_messages</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">message_match</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">message_info</span><span class="p">):</span>
+                <span class="n">matching_messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">matching_messages</span></div>
+
+<div class="viewcode-block" id="GmailEvaluator.delete_draft_by_id"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.delete_draft_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">delete_draft_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">draft_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deletes the draft with the given ID.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">drafts</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">draft_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Draft deleted successfully.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GmailEvaluator.delete_sent_message_by_id"><a class="viewcode-back" href="../../../../../../autoapi/agent_studio/envs/desktop_env/evaluators/google/gmail_evaluator/index.html#agent_studio.envs.desktop_env.evaluators.google.gmail_evaluator.GmailEvaluator.delete_sent_message_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">delete_sent_message_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deletes the sent message with the given ID.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">message_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sent message with id </span><span class="si">{</span><span class="n">message_id</span><span class="si">}</span><span class="s2"> deleted successfully.&quot;</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the AgentStudio Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, AgentStudio Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
